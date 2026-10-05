@@ -1,0 +1,139 @@
+:root{
+    --green:#0f4d2a;
+    --green-dark:#08331c;
+    --gold:#e3b52e;
+    --lime:#c8dc2e;
+    --paper:#f7f8f3;
+    --ink:#1b2a21;
+    --muted:#5d6b62;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    min-height:100vh;
+    display:grid;
+    place-items:center;
+    padding:24px;
+    font-family:"Segoe UI",Roboto,Arial,sans-serif;
+    background:linear-gradient(135deg,#dfe8e1,#b9cdbf);
+    color:var(--ink);
+  }
+  .card{
+    width:100%;
+    max-width:560px;
+    background:var(--paper);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 20px 40px rgba(8,51,28,.35);
+    display:flex;
+    flex-direction:column;
+    position:relative;
+  }
+  .header{
+    background:linear-gradient(120deg,var(--green-dark),var(--green));
+    color:#fff;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:14px 18px;
+    border-bottom:4px solid var(--gold);
+  }
+  .logo-sm{
+    width:52px;height:52px;flex:none;
+    border-radius:50%;
+    background:#fff;
+    border:3px solid var(--gold);
+    display:grid;place-items:center;
+    font:800 15px/1 Georgia,serif;
+    color:var(--green);
+    overflow:hidden;
+    position:relative;
+  }
+  .logo-sm img,.photo img{
+    position:absolute;inset:0;
+    width:100%;height:100%;
+    object-fit:cover;
+  }
+  .school h1{
+    font:700 17px/1.2 Georgia,"Times New Roman",serif;
+    letter-spacing:.2px;
+  }
+  .school p{
+    font-size:12.5px;
+    font-style:italic;
+    color:#d9ecd9;
+    margin-top:3px;
+  }
+  .body{
+    position:relative;
+    display:grid;
+    grid-template-columns:150px 1fr;
+    gap:20px;
+    padding:20px 22px 18px;
+  }
+  .body::before{ /* watermark */
+    content:"IETI";
+    position:absolute;
+    right:14px;bottom:-14px;
+    font:900 120px/1 Georgia,serif;
+    color:var(--green);
+    opacity:.05;
+    pointer-events:none;
+  }
+  .photo{
+    width:140px;
+    height:200px;
+    border-radius:12px;
+    border:3px solid var(--green);
+    background:repeating-linear-gradient(45deg,#e9efe9 0 10px,#f4f7f4 10px 20px);
+    display:grid;
+    place-items:center;
+    color:var(--muted);
+    font-weight:600;
+    letter-spacing:2px;
+    font-size:13px;
+    overflow:hidden;
+    position:relative;
+  }
+  .id-no{
+    margin-top:10px;
+    text-align:center;
+    background:var(--green);
+    color:#fff;
+    border-radius:8px;
+    padding:6px 0;
+    font:700 15px/1 "Courier New",monospace;
+    letter-spacing:1px;
+  }
+  .info{display:flex;flex-direction:column;gap:12px}
+  .field label{
+    display:block;
+    font-size:11px;
+    color:var(--muted);
+    font-weight:600;
+    margin-bottom:2px;
+  }
+  .field span{
+    display:block;
+    font-weight:600;
+    font-size:15px;
+    padding-bottom:4px;
+    border-bottom:1px dashed #b7c4ba;
+  }
+  .field.name span{
+    font:700 20px/1.2 Georgia,serif;
+    color:var(--green-dark);
+  }
+  .footer{
+    background:linear-gradient(90deg,var(--lime),#e6ef7a,var(--lime));
+    text-align:center;
+    padding:10px;
+    font-weight:800;
+    letter-spacing:3px;
+    color:var(--green-dark);
+    font-size:14px;
+  }
+  @media (max-width:480px){
+    .body{grid-template-columns:1fr;justify-items:center}
+    .info{width:100%}
+    .school h1{font-size:14px}
+  }

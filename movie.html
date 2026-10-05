@@ -1,309 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Reel House</title>
-<style>
-  *{ box-sizing: border-box; }
-
-  body{
-    margin:0;
-    background: #14110f;
-    color: #f2ece2;
-    font-family: 'Georgia', 'Times New Roman', serif;
-  }
-
-  header{
-    padding: 36px 6vw 24px;
-    border-bottom: 1px solid #2a2521;
-  }
-
-  header h1{
-    margin:0;
-    font-size: 2.4rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-  }
-
-  header h1 span{
-    color: #c0392b;
-    font-style: italic;
-  }
-
-  /* ---------- NAVIGATION ---------- */
-  nav{
-    margin-top: 26px;
-    display:flex;
-    gap: 40px;
-    font-family: Arial, sans-serif;
-  }
-
-  nav a{
-    position: relative;
-    color: #9a8f82;
-    text-decoration:none;
-    font-size: 1rem;
-    letter-spacing: 0.5px;
-    padding-bottom: 8px;
-    cursor:pointer;
-    transition: color 0.3s ease, letter-spacing 0.3s ease;
-  }
-
-  nav a::after{
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 0%;
-    height: 2px;
-    background: linear-gradient(90deg, #c0392b, #e6b800);
-    transition: width 0.35s ease, left 0.35s ease;
-  }
-
-  nav a:hover,
-  nav a.active{
-    color: #f2ece2;
-    letter-spacing: 1px;
-  }
-
-  nav a:hover::after,
-  nav a.active::after{
-    width: 100%;
-    left: 0%;
-  }
-  /* --------------------------------- */
-
-  main{
-    padding: 40px 6vw 80px;
-  }
-
-  /* ---------- SECTIONS (one per nav tab) ---------- */
-  .section{
-    display: none;
-    animation: fadeIn 0.4s ease;
-  }
-
-  .section.active{
-    display: block;
-  }
-
-  @keyframes fadeIn{
-    from{ opacity: 0; transform: translateY(8px); }
-    to{ opacity: 1; transform: translateY(0); }
-  }
-  /* -------------------------------------------------- */
-
-  .grid{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 34px 26px;
-  }
-
-  .card{
-    text-align:center;
-  }
-
-  .poster{
-    width:100%;
-    aspect-ratio: 2 / 3;
-    height: auto;
-    object-fit: cover;
-    border-radius: 4px;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.45);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-    cursor: pointer;
-  }
-
-  .poster:hover{
-    transform: rotate(-6deg) scale(1.05);
-    box-shadow: 0 14px 26px rgba(0,0,0,0.6);
-  }
-
-  .card p{
-    margin: 12px 0 0;
-    font-size: 0.95rem;
-    color: #9a8f82;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reel House</title>
+  <link rel="stylesheet" href="movie.css">
 </head>
 <body>
 
-<header>
-  <h1>Reel<span>House</span></h1>
-  <nav>
-    <a class="active" onclick="showSection('latest', this)">Latest Movies</a>
-    <a onclick="showSection('top', this)">Top Rated</a>
-    <a onclick="showSection('recommended', this)">Recommended Movies</a>
-  </nav>
-</header>
+  <header>
+    <h1>Reel<span>House</span></h1>
+    <nav>
+      <a class="active" onclick="showSection('latest', this)">Latest Movies</a>
+      <a onclick="showSection('top', this)">Top Rated</a>
+      <a onclick="showSection('recommended', this)">Recommended Movies</a>
+    </nav>
+  </header>
 
-<main>
+  <main>
 
-  <div id="latest" class="section active">
-    <div class="grid">
+    <div id="latest" class="section active">
+      <div class="grid">
 
-      <div class="card">
-        <img src="latest1.jpg" class="poster">
-        <p>Movie Title 1</p>
-      </div>
+        <div class="card">
+          <img src="images/spartan.png" class="poster" alt="TROY">
+          <p>TROY</p>
+        </div>
 
-      <div class="card">
-        <img src="latest2.jpg" class="poster">
-        <p>Movie Title 2</p>
-      </div>
+        <div class="card">
+          <img src="images/spartan2.png" class="poster" alt="ODYSSEY">
+          <p>ODYSSEY</p>
+        </div>
 
-      <div class="card">
-        <img src="latest3.jpg" class="poster">
-        <p>Movie Title 3</p>
-      </div>
+        <div class="card">
+          <img src="images/spartan3.png" class="poster" alt="SPARTANS">
+          <p>SPARTANS</p>
+        </div>
 
-      <div class="card">
-        <img src="latest4.jpg" class="poster">
-        <p>Movie Title 4</p>
-      </div>
+        <div class="card">
+          <img src="images/avenger1.png" class="poster" alt="AVENGERS: ENDGAME">
+          <p>AVENGERS: ENDGAME</p>
+        </div>
 
-      <div class="card">
-        <img src="latest5.jpg" class="poster">
-        <p>Movie Title 5</p>
-      </div>
+        <div class="card">
+          <img src="images/avenger2.png" class="poster" alt="MARVELS: AVENGERS">
+          <p>MARVELS: AVENGERS</p>
+        </div>
 
-      <div class="card">
-        <img src="latest6.jpg" class="poster">
-        <p>Movie Title 6</p>
-      </div>
+        <div class="card">
+          <img src="images/avenger3.png" class="poster" alt="MARVELS: THE AVENGERS">
+          <p>MARVELS: THE AVENGERS</p>
+        </div>
 
-      <div class="card">
-        <img src="latest7.jpg" class="poster">
-        <p>Movie Title 7</p>
-      </div>
+        <div class="card">
+          <img src="images/g3.png" class="poster" alt="THE GREEN KNIGHT">
+          <p>THE GREEN KNIGHT</p>
+        </div>
 
-      <div class="card">
-        <img src="latest8.jpg" class="poster">
-        <p>Movie Title 8</p>
-      </div>
+        <div class="card">
+          <img src="images/g1.png" class="poster" alt="THE GUANDIAN OF TIME">
+          <p>THE GUANDIAN OF TIME</p>
+        </div>
 
-      <div class="card">
-        <img src="latest9.jpg" class="poster">
-        <p>Movie Title 9</p>
-      </div>
-    </div>
-  </div>
-
-  <div id="top" class="section">
-    <div class="grid">
-
-      <div class="card">
-        <img src="top1.jpg" class="poster">
-        <p>Movie Title 1</p>
-      </div>
-
-      <div class="card">
-        <img src="top2.jpg" class="poster">
-        <p>Movie Title 2</p>
-      </div>
-
-      <div class="card">
-        <img src="top3.jpg" class="poster">
-        <p>Movie Title 3</p>
-      </div>
-
-      <div class="card">
-        <img src="top4.jpg" class="poster">
-        <p>Movie Title 4</p>
-      </div>
-
-      <div class="card">
-        <img src="top5.jpg" class="poster">
-        <p>Movie Title 5</p>
-      </div>
-
-      <div class="card">
-        <img src="top6.jpg" class="poster">
-        <p>Movie Title 6</p>
-      </div>
-
-      <div class="card">
-        <img src="top7.jpg" class="poster">
-        <p>Movie Title 7</p>
-      </div>
-
-      <div class="card">
-        <img src="top8.jpg" class="poster">
-        <p>Movie Title 8</p>
-      </div>
-
-      <div class="card">
-        <img src="top9.jpg" class="poster">
-        <p>Movie Title 9</p>
+        <div class="card">
+          <img src="images/g2.png" class="poster" alt="GUARDIANS OF THE NIGHT">
+          <p>GUARDIANS OF THE NIGHT</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div id="recommended" class="section">
-    <div class="grid">
+    <div id="top" class="section">
+      <div class="grid">
 
-      <div class="card">
-        <img src="recommended1.jpg" class="poster">
-        <p>Movie Title 1</p>
-      </div>
+        <div class="card">
+          <img src="images/k.png" class="poster" alt="EPIC BATTLE">
+          <p>EPIC BATTLE</p>
+        </div>
 
-      <div class="card">
-        <img src="recommended2.jpg" class="poster">
-        <p>Movie Title 2</p>
-      </div>
+        <div class="card">
+          <img src="images/k2.png" class="poster" alt="DRAGON NIGHT">
+          <p>DRAGON NIGHT</p>
+        </div>
 
-      <div class="card">
-        <img src="recommended3.jpg" class="poster">
-        <p>Movie Title 3</p>
-      </div>
+        <div class="card">
+          <img src="images/k1.png" class="poster" alt="PENTAGON">
+          <p>PENTAGON</p>
+        </div>
 
-      <div class="card">
-        <img src="recommended4.jpg" class="poster">
-        <p>Movie Title 4</p>
-      </div>
+        <div class="card">
+          <img src="images/m1.png" class="poster" alt="BLACK PANTHER">
+          <p>BLACK PANTHER</p>
+        </div>
 
-      <div class="card">
-        <img src="recommended5.jpg" class="poster">
-        <p>Movie Title 5</p>
-      </div>
+        <div class="card">
+          <img src="images/m2.png" class="poster" alt="THE LEGEND OF 10 RINGS">
+          <p>THE LEGEND OF 10 RINGS</p>
+        </div>
 
-      <div class="card">
-        <img src="recommended6.jpg" class="poster">
-        <p>Movie Title 6</p>
-      </div>
+        <div class="card">
+          <img src="images/m3.png" class="poster" alt="THOR RAGNAROK">
+          <p>THOR RAGNAROK</p>
+        </div>
 
-      <div class="card">
-        <img src="recommended7.jpg" class="poster">
-        <p>Movie Title 7</p>
-      </div>
+        <div class="card">
+          <img src="images/t1.png" class="poster" alt="ONG BAK">
+          <p>ONG BAK</p>
+        </div>
 
-      <div class="card">
-        <img src="recommended8.jpg" class="poster">
-        <p>Movie Title 8</p>
-      </div>
+        <div class="card">
+          <img src="images/t2.png" class="poster" alt="JOHN WICK">
+          <p>JOHN WICK</p>
+        </div>
 
-      <div class="card">
-        <img src="recommended9.jpg" class="poster">
-        <p>Movie Title 9</p>
+        <div class="card">
+          <img src="images/t3.png" class="poster" alt="GHOST ">
+          <p>GHOST </p>
+        </div>
       </div>
     </div>
-  </div>
 
-</main>
+    <div id="recommended" class="section">
+      <div class="grid">
 
-<script>
-  function showSection(id, link){
-    document.querySelectorAll('.section').forEach(function(sec){
-      sec.classList.remove('active');
-    });
-    document.getElementById(id).classList.add('active');
+        <div class="card">
+          <img src="images/cartoon1.png" class="poster" alt="OVER THE MOON">
+          <p>OVER THE MOON</p>
+        </div>
 
-    document.querySelectorAll('nav a').forEach(function(a){
-      a.classList.remove('active');
-    });
-    link.classList.add('active');
-  }
-</script>
+        <div class="card">
+          <img src="images/cartoon2.png" class="poster" alt="MEET THE ROBINSONS">
+          <p>MEET THE ROBINSONS</p>
+        </div>
+
+        <div class="card">
+          <img src="images/cartoon3.png" class="poster" alt="BIG HERO 6">
+          <p>BIG HERO 6</p>
+        </div>
+
+        <div class="card">
+          <img src="images/d4.png" class="poster" alt="ELEMENTAL">
+          <p>ELEMENTAL</p>
+        </div>
+
+        <div class="card">
+          <img src="images/d5.png" class="poster" alt="COCO">
+          <p>COCO</p>
+        </div>
+
+        <div class="card">
+          <img src="images/d6.png" class="poster" alt="MOANA 2">
+          <p>MOANA 2</p>
+        </div>
+
+        <div class="card">
+          <img src="images/d3.png" class="poster" alt="UP">
+          <p>UP</p>
+        </div>
+
+        <div class="card">
+          <img src="images/d1.png" class="poster" alt="ELIO">
+          <p>ELIO</p>
+        </div>
+
+        <div class="card">
+          <img src="images/d2.png" class="poster" alt="TOY STORY ">
+          <p>TOY STORY</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    function showSection(id, link){
+      document.querySelectorAll('.section').forEach(function(sec){
+        sec.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+
+      document.querySelectorAll('nav a').forEach(function(a){
+        a.classList.remove('active');
+      });
+      link.classList.add('active');
+    }
+  </script>
 
 </body>
 </html>

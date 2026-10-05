@@ -1,70 +1,128 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Table</title>
-<link rel="stylesheet"href="table.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Table</title>
+  <link rel="stylesheet" href="table.css">
 </head>
 <body>
-<main>
+  <main>
 
-  <header>
-    <h1>Table</h1>
-  </header>
+    <header>
+      <h1>Table</h1>
+    </header>
 
-  <section>
-    <h2>Calendar</h2>
-    <div class="wrap">
-      <table class="cal">
-        <thead>
-          <tr><th class="month" colspan="7">August 2026</th></tr>
-        </thead>
-        <tbody>
-          <tr class="dow"><td>Sun</td><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri
-          </td><td>Sat</td></tr>
-          <tr><td class="out">26</td><td class="out">27</td><td class="out">28</td><td class="out">29</td>
-            <td class="out">30</td><td class="out">31</td><td>1</td></tr>
-          <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
-          <tr><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
-          <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
-            <td class="mark">21</td><td>22</td></tr>
-          <tr><td>23</td><td>24</td><td>25</td><td class="mark">26</td>
-            <td>27</td><td>28</td><td>29</td></tr>
-          <tr><td>30</td><td class="mark">31</td><td class="out">1</td>
-            <td class="out">2</td><td class="out">3</td><td class="out">4</td><td class="out">5</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+    <section>
+      <h2>Calendar</h2>
+      <div class="wrap">
+        <table class="cal">
+          <thead>
+            <tr>
+              <th class="month" colspan="7">August 2026</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="dow">
+              <td>Sun</td>
+              <td>Mon</td>
+              <td>Tue</td>
+              <td>Wed</td>
+              <td>Thu</td>
+              <td>Fri</td>
+              <td>Sat</td>
+            </tr>
+            <tr>
+              <td class="out">26</td>
+              <td class="out">27</td>
+              <td class="out">28</td>
+              <td class="out">29</td>
+              <td class="out">30</td>
+              <td class="out">31</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+              <td>6</td>
+              <td>7</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>10</td>
+              <td>11</td>
+              <td>12</td>
+              <td>13</td>
+              <td>14</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>17</td>
+              <td>18</td>
+              <td>19</td>
+              <td>20</td>
+              <td class="mark">21</td>
+              <td>22</td>
+            </tr>
+            <tr>
+              <td>23</td>
+              <td>24</td>
+              <td>25</td>
+              <td class="mark">26</td>
+              <td>27</td>
+              <td>28</td>
+              <td>29</td>
+            </tr>
+            <tr>
+              <td>30</td>
+              <td class="mark">31</td>
+              <td class="out">1</td>
+              <td class="out">2</td>
+              <td class="out">3</td>
+              <td class="out">4</td>
+              <td class="out">5</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-  <section>
-    <h2>Rowspan</h2>
-    <div class="wrap">
-      <table class="courses">
-        <thead>
-          <tr><th class="title" colspan="2">IETI Course Offering</th></tr>
-        </thead>
-        <tbody>
-          <tr class="tesda">
-            <td class="agency" rowspan="2"><img class="logo" src="tesda.png" alt="Larawan"></td>
-          <tr class="tesda"><td class="prog">Diploma in Cybersecurity</td>
-        </tr>
-          <tr class="deped">
-            <td class="agency" rowspan="2"><img class="logo" src="CHED.png" alt="Larawan"></td>
-            <td class="prog">SHS - Tech-Pro</td>
-          </tr>
-          <tr class="deped"><td class="prog">SHS - Academic</td>
-        </tr>
-          <tr class="ched">
-            <td class="agency"><img class="logo" src="IT.jfif" alt="Larawan"></td>
-            <td class="prog">BSIT</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+    <section>
+      <h2>Rowspan</h2>
+      <div class="wrap">
+        <table class="courses">
+          <thead>
+            <tr>
+              <th class="title" colspan="2">IETI Course Offering</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="tesda">
+              <td class="agency" rowspan="2"><img class="logo" src="images/tesda.png" alt="Larawan"></td>
+            </tr>
+            <tr class="tesda">
+              <td class="prog">Diploma in Cybersecurity</td>
+            </tr>
+            <tr class="deped">
+              <td class="agency" rowspan="2"><img class="logo" src="images/CHED.png" alt="Larawan"></td>
+              <td class="prog">SHS - Tech-Pro</td>
+            </tr>
+            <tr class="deped">
+              <td class="prog">SHS - Academic</td>
+            </tr>
+            <tr class="ched">
+              <td class="agency"><img class="logo" src="images/IT.jfif" alt="Larawan"></td>
+              <td class="prog">BSIT</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-</main>
+  </main>
 </body>
 </html>
