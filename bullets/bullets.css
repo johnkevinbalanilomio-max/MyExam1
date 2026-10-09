@@ -3,7 +3,7 @@
   body {
     font-family: "Segoe UI", Roboto, Arial, sans-serif;
     color: #1f2937;
-    background: url('images/back2.png') center/cover no-repeat fixed;
+    background: url('../images/back2.png') center/cover no-repeat fixed;
     min-height: 100vh;
     padding: 20px;
   } 

@@ -15,8 +15,7 @@
     padding:24px;
     font-family:"Segoe UI",Roboto,Arial,sans-serif;
     background:
-      linear-gradient(135deg,#dfe8e1,#b9cdbf),
-      url("images/back3.png") center/cover no-repeat fixed;
+      url("../images/back4.png") center/cover no-repeat fixed;
     color:var(--ink);
   }
   .card{
@@ -39,7 +38,7 @@
     position:absolute;
     inset:0;
     background:
-      rgba(252,253,248,0.88), /* Light overlay for text readability */
+      rgba(252,253,248,0.88),
       repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px);
     pointer-events:none;
     z-index:1;
@@ -96,7 +95,7 @@
     gap:20px;
     padding:20px 22px 18px;
   }
-  .body::before{ /* watermark */
+  .body::before{
     content:"IETI";
     position:absolute;
     right:14px;bottom:-14px;

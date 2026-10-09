@@ -9,16 +9,16 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- ===== Header / navigation ===== -->
+
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="#"><span>Movi</span>Zone</a>
+      <a class="logo" href="#home"><span>Movi</span>Zone</a>
       <nav aria-label="Main">
         <ul class="nav-list">
-          <li><a class="active" href="#">Home</a></li>
-          <li><a href="#">Movies</a></li>
-          <li><a href="#">TV Shows</a></li>
-          <li><a href="#">Anime</a></li>
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#movies">Movies</a></li>
+          <li><a href="#tv-shows">TV Shows</a></li>
+          <li><a href="#anime">Anime</a></li>
         </ul>
       </nav>
       <div class="search" role="search">
@@ -28,28 +28,26 @@
   </header>
 
   <main>
-    <!-- ===== Hero banner ===== -->
-    <section class="hero" aria-label="Featured movie">
-      <img src="images/head.png" class="hero-bg" alt="">
+  
+    <section class="hero" id="home" aria-label="Featured movie">
+      <img src="../images/head.png" class="hero-bg" alt="">
       <div class="container hero-inner">
         <div class="hero-text">
           <p class="hero-tag">Now streaming</p>
           <h1>Furiosa: A Mad Max Saga</h1>
           <p>Snatched from the Green Place of Many Mothers, young Furiosa fights through a post-apocalyptic wasteland, battling ruthless enemies to reclaim her homeland.</p>
-          <a class="btn" href="#">Watch Now</a>
+          <a class="btn" href="#movies">Watch Now</a>
         </div>
         <div class="hero-poster">
-          <img src="images/head2.png" class="poster" alt="Furiosa: A Mad Max Saga">
+          <img src="../images/head2.png" class="poster" alt="Furiosa: A Mad Max Saga">
           <span class="play" aria-hidden="true"></span>
         </div>
       </div>
     </section>
 
-    <!-- ===== Movie sections ===== -->
     <div class="container">
 
-      <!-- Trending Now -->
-      <section class="section" aria-labelledby="trending">
+      <section class="section" id="movies" aria-labelledby="trending">
         <div class="section-head">
           <h2 id="trending">Trending Now</h2>
           <a class="view-all" href="#">View All &rsaquo;</a>
@@ -58,47 +56,46 @@
           <li>
             <a class="card wide" href="#">
               <span class="thumb">
-                <img src="images/a1.png" class="poster" alt="a1">
-                <em>Godzilla x Kong: The New Empire</em>
+                <img src="../images/a1.png" class="poster" alt="a1">
+                <em>the end of uak street</em>
               </span>
             </a>
           </li>
           <li>
             <a class="card wide" href="#">
               <span class="thumb">
-                <img src="images/a2.png" class="poster" alt="a2">
-                <em>Madame Web</em>
+                <img src="../images/a2.png" class="poster" alt="a2">
+                <em>Odyssey</em>
               </span>
             </a>
           </li>
           <li>
             <a class="card wide" href="#">
               <span class="thumb">
-                <img src="images/a3.png" class="poster" alt="a3">
-                <em>The Boys</em>
+                <img src="../images/a3.png" class="poster" alt="a3">
+                <em>Verity</em>
               </span>
             </a>
           </li>
           <li>
             <a class="card wide" href="#">
               <span class="thumb">
-                <img src="images/a4.png" class="poster" alt="a4">
-                <em>Doctor Who</em>
+                <img src="../images/a4.png" class="poster" alt="a4">
+                <em>Priest</em>
               </span>
             </a>
           </li>
           <li>
             <a class="card wide" href="#">
               <span class="thumb">
-                <img src="images/a5.png" class="poster" alt="a5">
-                <em>Jujutsu Kaisen</em>
+                <img src="../images/a5.png" class="poster" alt="a5">
+                <em>venom</em>
               </span>
             </a>
           </li>
         </ul>
       </section>
 
-      <!-- New Releases -->
       <section class="section" aria-labelledby="new">
         <div class="section-head">
           <h2 id="new">New Releases</h2>
@@ -108,7 +105,7 @@
           <li>
             <a class="card wide" href="#">
               <span class="thumb">
-                <img src="images/c1.png" class="poster" alt="c1">
+                <img src="../images/c1.png" class="poster" alt="c1">
                 <em>Atlas</em>
               </span>
             </a>
@@ -116,7 +113,7 @@
           <li>
             <a class="card wide" href="#">
               <span class="thumb">
-                <img src="images/c2.png" class="poster" alt="The Wages of Fear">
+                <img src="../images/c2.png" class="poster" alt="The Wages of Fear">
                 <em>The Wages of Fear</em>
               </span>
             </a>
@@ -124,7 +121,7 @@
           <li>
             <a class="card wide" href="#">
               <span class="thumb">
-                <img src="images/c3.png" class="poster" alt="Supacell">
+                <img src="../images/c3.png" class="poster" alt="Supacell">
                 <em>Supacell</em>
               </span>
             </a>
@@ -132,7 +129,7 @@
           <li>
             <a class="card wide" href="#">
               <span class="thumb">
-                <img src="images/c4.png" class="poster" alt="Vikings: Valhalla">
+                <img src="../images/c4.png" class="poster" alt="Vikings: Valhalla">
                 <em>Vikings: Valhalla</em>
               </span>
             </a>
@@ -140,7 +137,7 @@
           <li>
             <a class="card wide" href="#">
               <span class="thumb">
-                <img src="images/c5.png" class="poster" alt="c5">
+                <img src="../images/c5.png" class="poster" alt="c5">
                 <em>Rising Impact</em>
               </span>
             </a>
@@ -148,7 +145,6 @@
         </ul>
       </section>
 
-      <!-- Top Rated -->
       <section class="section" aria-labelledby="top">
         <div class="section-head">
           <h2 id="top">Top Rated</h2>
@@ -158,62 +154,61 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/d1.png" class="poster" alt="d1">
+                <img src="../images/d1.png" class="poster" alt="d1">
               </span>
-              <span class="title">Game of Thrones</span>
+              <span class="title">The dog star</span>
               <span class="meta">Series</span>
             </a>
           </li>
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/d2.png" class="poster" alt="d2">
+                <img src="../images/d2.png" class="poster" alt="d2">
               </span>
-              <span class="title">Spider-Man: No Way Home</span>
+              <span class="title">Star wars</span>
               <span class="meta">2021</span>
             </a>
           </li>
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/d3.png" class="poster" alt="d3">
+                <img src="../images/d3.png" class="poster" alt="d3">
               </span>
-              <span class="title">Peaky Blinders</span>
+              <span class="title">Send help</span>
               <span class="meta">Series</span>
             </a>
           </li>
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/d4.png" class="poster" alt="d4">
+                <img src="../images/d4.png" class="poster" alt="d4">
               </span>
-              <span class="title">WandaVision</span>
+              <span class="title">Forgotten Iland</span>
               <span class="meta">Series</span>
             </a>
           </li>
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/d5.png" class="poster" alt="d5">
+                <img src="../images/d5.png" class="poster" alt="d5">
               </span>
-              <span class="title">Loki</span>
+              <span class="title">Moana</span>
               <span class="meta">Series</span>
             </a>
           </li>
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/d6.png" class="poster" alt="The Night Agent">
+                <img src="../images/d6.png" class="poster" alt="Toxic">
               </span>
-              <span class="title">The Night Agent</span>
+              <span class="title">Toxic</span>
               <span class="meta">Series</span>
             </a>
           </li>
         </ul>
       </section>
 
-      <!-- Popular Series -->
-      <section class="section" aria-labelledby="series">
+      <section class="section" id="tv-shows" aria-labelledby="series">
         <div class="section-head">
           <h2 id="series">Popular Series</h2>
           <a class="view-all" href="#">View All &rsaquo;</a>
@@ -222,7 +217,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/f1.png" class="poster" alt="One Piece">
+                <img src="../images/f1.png" class="poster" alt="One Piece">
               </span>
               <span class="title">One Piece</span>
               <span class="meta">Series</span>
@@ -231,7 +226,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/f2.png" class="poster" alt="Doctor Strange">
+                <img src="../images/f2.png" class="poster" alt="Doctor Strange">
               </span>
               <span class="title">Doctor Strange</span>
               <span class="meta">Series</span>
@@ -240,7 +235,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/f3.png" class="poster" alt="Detective Conan">
+                <img src="../images/f3.png" class="poster" alt="Detective Conan">
               </span>
               <span class="title">Detective Conan</span>
               <span class="meta">Series</span>
@@ -249,7 +244,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/f4.png" class="poster" alt="Mouse">
+                <img src="../images/f4.png" class="poster" alt="Mouse">
               </span>
               <span class="title">Mouse</span>
               <span class="meta">Series</span>
@@ -258,7 +253,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/f5.png" class="poster" alt="Avatar">
+                <img src="../images/f5.png" class="poster" alt="Avatar">
               </span>
               <span class="title">Avatar</span>
               <span class="meta">Series</span>
@@ -267,7 +262,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/f6.png" class="poster" alt="Transformer">
+                <img src="../images/f6.png" class="poster" alt="Transformer">
               </span>
               <span class="title">Transformer</span>
               <span class="meta">Series</span>
@@ -276,7 +271,6 @@
         </ul>
       </section>
 
-      <!-- Comedy Movies -->
       <section class="section" aria-labelledby="comedy">
         <div class="section-head">
           <h2 id="comedy">Comedy Movies</h2>
@@ -286,7 +280,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/g1.png" class="poster" alt="The Mask">
+                <img src="../images/g1.png" class="poster" alt="The Mask">
               </span>
               <span class="title">The Mask</span>
               <span class="meta">2012</span>
@@ -295,7 +289,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/g2.png" class="poster" alt="Little Brother">
+                <img src="../images/g2.png" class="poster" alt="Little Brother">
               </span>
               <span class="title">Little Brother</span>
               <span class="meta">2023</span>
@@ -304,7 +298,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/g3.png" class="poster" alt="Coyote vs Acme">
+                <img src="../images/g3.png" class="poster" alt="Coyote vs Acme">
               </span>
               <span class="title">Coyote vs Acme</span>
               <span class="meta">2015</span>
@@ -313,7 +307,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/g4.png" class="poster" alt="Jackass Best and Last">
+                <img src="../images/g4.png" class="poster" alt="Jackass Best and Last">
               </span>
               <span class="title">Jackass Best and Last</span>
               <span class="meta">2024</span>
@@ -322,7 +316,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/g5.png" class="poster" alt="Coming to America">
+                <img src="../images/g5.png" class="poster" alt="Coming to America">
               </span>
               <span class="title">Coming to America</span>
               <span class="meta">2020</span>
@@ -331,7 +325,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/g6.png" class="poster" alt="Friday">
+                <img src="../images/g6.png" class="poster" alt="Friday">
               </span>
               <span class="title">Friday</span>
               <span class="meta">1984</span>
@@ -340,7 +334,6 @@
         </ul>
       </section>
 
-      <!-- Action Movies -->
       <section class="section" aria-labelledby="action">
         <div class="section-head">
           <h2 id="action">Action Movies</h2>
@@ -350,7 +343,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/i1.png" class="poster" alt="Blood and Bone 2">
+                <img src="../images/i1.png" class="poster" alt="Blood and Bone 2">
               </span>
               <span class="title">Blood and Bone 2</span>
               <span class="meta">2022</span>
@@ -359,7 +352,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/i2.png" class="poster" alt="The Witch">
+                <img src="../images/i2.png" class="poster" alt="The Witch">
               </span>
               <span class="title">The Witch</span>
               <span class="meta">2015</span>
@@ -368,7 +361,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/i3.png" class="poster" alt="Action Action">
+                <img src="../images/i3.png" class="poster" alt="Action Action">
               </span>
               <span class="title">Action Action</span>
               <span class="meta">2021</span>
@@ -377,7 +370,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/i4.png" class="poster" alt="Spider-Man: No Way Home">
+                <img src="../images/i4.png" class="poster" alt="Spider-Man: No Way Home">
               </span>
               <span class="title">Spider-Man: No Way Home</span>
               <span class="meta">2022</span>
@@ -386,7 +379,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/i5.png" class="poster" alt="Batman v Superman">
+                <img src="../images/i5.png" class="poster" alt="Batman v Superman">
               </span>
               <span class="title">Batman v Superman</span>
               <span class="meta">2024</span>
@@ -395,7 +388,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/i6.png" class="poster" alt="Spider-Man: Maverick">
+                <img src="../images/i6.png" class="poster" alt="Spider-Man: Maverick">
               </span>
               <span class="title">Spider-Man: Maverick</span>
               <span class="meta">2022</span>
@@ -404,7 +397,6 @@
         </ul>
       </section>
 
-      <!-- Anime -->
       <section class="section" aria-labelledby="anime">
         <div class="section-head">
           <h2 id="anime">Anime</h2>
@@ -414,7 +406,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/j1.png" class="poster" alt="Your Name">
+                <img src="../images/j1.png" class="poster" alt="Your Name">
               </span>
               <span class="title">Your Name</span>
               <span class="meta">Anime</span>
@@ -423,7 +415,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/j2.png" class="poster" alt="Demon Slayer">
+                <img src="../images/j2.png" class="poster" alt="Demon Slayer">
               </span>
               <span class="title">Demon Slayer</span>
               <span class="meta">Anime</span>
@@ -432,7 +424,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/j3.png" class="poster" alt="Whisper of the Heart">
+                <img src="../images/j3.png" class="poster" alt="Whisper of the Heart">
               </span>
               <span class="title">Whisper of the Heart</span>
               <span class="meta">Anime</span>
@@ -441,7 +433,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/j4.png" class="poster" alt="Jujutsu Kaisen 0">
+                <img src="../images/j4.png" class="poster" alt="Jujutsu Kaisen 0">
               </span>
               <span class="title">Jujutsu Kaisen 0</span>
               <span class="meta">Anime</span>
@@ -450,7 +442,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/j5.png" class="poster" alt="Bleach">
+                <img src="../images/j5.png" class="poster" alt="Bleach">
               </span>
               <span class="title">Bleach</span>
               <span class="meta">Anime</span>
@@ -459,7 +451,7 @@
           <li>
             <a class="card" href="#">
               <span class="thumb">
-                <img src="images/j6.png" class="poster" alt="Boruto">
+                <img src="../images/j6.png" class="poster" alt="Boruto">
               </span>
               <span class="title">Boruto</span>
               <span class="meta">Anime</span>
@@ -471,23 +463,22 @@
     </div>
   </main>
 
-  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <a class="logo" href="#"><span>Movi</span>Zone</a>
+      <a class="logo" href="#home"><span>Movi</span>Zone</a>
       <div>
         <h3>Useful Links</h3>
         <ul>
-          <li><a class="active" href="#">Home</a></li>
-          <li><a href="#">Movies</a></li>
-          <li><a href="#">TV Shows</a></li>
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#movies">Movies</a></li>
+          <li><a href="#tv-shows">TV Shows</a></li>
         </ul>
       </div>
       <div>
         <h3>Address</h3>
-        <address>Address: 1234 Elm Street, Suite 567,<br>Downtown City, State, ZIP Code</address>
+        <address>Address:Antipolo<br>marikina,</address>
         <h3>Email</h3>
-        <p><a href="mailto:info@movizone.com">info@movizone.com</a></p>
+        <p><a href="mailto:lomiokevin@gmail.com">lomiokevin@gmail.com</a></p>
       </div>
       <div>
         <h3>Phone</h3>

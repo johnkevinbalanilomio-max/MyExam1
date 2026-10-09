@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Table</title>
   <link rel="stylesheet" href="table.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@19.2.0",
+        "react/": "https://esm.sh/react@19.2.0/",
+        "react-dom/client": "https://esm.sh/react-dom@19.2.0/client?external=react",
+        "page-mascot": "https://esm.sh/page-mascot@0.1.0?external=react"
+      }
+    }
+  </script>
 </head>
 <body>
   <main>
@@ -102,20 +112,20 @@
           </thead>
           <tbody>
             <tr class="tesda">
-              <td class="agency" rowspan="2"><img class="logo" src="images/tesda.png" alt="TESDA"></td>
+              <td class="agency" rowspan="2"><img class="logo" src="../images/tesda.png" alt="TESDA"></td>
             </tr>
             <tr class="tesda">
               <td class="prog">Diploma in Cybersecurity</td>
             </tr>
             <tr class="deped">
-              <td class="agency" rowspan="2"><img class="logo" src="images/CHED.png" alt="CHED"></td>
+              <td class="agency" rowspan="2"><img class="logo" src="../images/CHED.png" alt="CHED"></td>
               <td class="prog">SHS - Tech-Pro</td>
             </tr>
             <tr class="deped">
               <td class="prog">SHS - Academic</td>
             </tr>
             <tr class="ched">
-              <td class="agency"><img class="logo" src="images/IT.jfif" alt="IT"></td>
+              <td class="agency"><img class="logo" src="../images/bsit.png" alt="IT"></td>
               <td class="prog">BSIT</td>
             </tr>
           </tbody>
@@ -124,5 +134,20 @@
     </section>
 
   </main>
+  <div class="mascot-root" id="mascot-root"></div>
+  <script type="module">
+    import { createElement } from "react";
+    import { createRoot } from "react-dom/client";
+    import { Mascot } from "page-mascot";
+
+    createRoot(document.getElementById("mascot-root")).render(
+      createElement(Mascot, {
+        directions: "../images/cap-directions.webp",
+        reactions: "../images/cap-reactions.webp",
+        size: 230,
+        label: "cap"
+      })
+    );
+  </script>
 </body>
 </html>

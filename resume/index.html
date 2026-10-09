@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Lomio - Resume</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@19.2.0",
+        "react/": "https://esm.sh/react@19.2.0/",
+        "react-dom/client": "https://esm.sh/react-dom@19.2.0/client?external=react",
+        "page-mascot": "https://esm.sh/page-mascot@0.1.0?external=react"
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <div class="resume">
+
+    <!-- top part -->
+    <header class="top">
+      <p class="small-title">Resume</p>
+      <h1 class="name">Kevin<br>Lomio</h1>
+      <p class="role">Developer</p>
+    </header>
+
+    <!-- middle part -->
+    <main class="main">
+
+      <h2 class="vertical left">IT Student Experience</h2>
+
+      <section class="experience">
+        <div class="job">
+          <h3>Software Developer</h3>
+          <p class="info">Bachelor of Science in Information Technology<br>2nd Year College | Present</p>
+          <p class="desc">Developed basic web pages and website layouts for academic projects. Gained experience in HTML, CSS, and basic programming while learning web development, computer systems, and troubleshooting. Continuously improving technical, creative, and problem-solving skills.</p>
+        </div>
+
+        <hr>
+
+        <div class="job">
+          <h3>IT Student</h3>
+          <p class="info">BS Information Technology<br>2nd Year College | Present</p>
+          <p class="desc">Developed basic web pages and simple applications for academic projects. Gained experience in HTML, CSS, website design, and basic programming while improving technical and problem-solving skills.</p>
+        </div>
+      </section>
+
+      <div class="photo">
+        <img src="../images/kevi1.png" alt="Kevin Lomio">
+      </div>
+
+      <section class="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>
+            <span class="skill-name">Frontend Development</span>
+            <span class="stars" aria-label="4 out of 5">★★★★<span class="off">★</span></span>
+          </li>
+          <li>
+            <span class="skill-name">Web Developer</span>
+            <span class="stars" aria-label="4 out of 5">★★★★<span class="off">★</span></span>
+          </li>
+          <li>
+            <span class="skill-name">Basic Hardware and Software Support</span>
+            <span class="stars" aria-label="3 out of 5">★★★<span class="off">★★</span></span>
+          </li>
+        </ul>
+      </section>
+
+      <h2 class="vertical right">Education</h2>
+
+      <section class="education">
+        <div class="school">
+          <h3>FEU Roosevelt</h3>
+          <p>Bachelor of Information Technology<br>2025</p>
+        </div>
+        <div class="school">
+          <h3>IETI College</h3>
+          <p>Bachelor of Information Technology<br>2026</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="contact">
+      <div>
+        <h4>Phone</h4>
+        <p>09123456789</p>
+      </div>
+      <div>
+        <h4>Email</h4>
+        <p>lomiokevin@gmail.com</p>
+      </div>
+      <div>
+        <h4>Address</h4>
+        <p>Antipolo City, Rizal</p>
+      </div>
+    </footer>
+
+    <div class="mascot-root" id="mascot-root"></div>
+  </div>
+
+  <script type="module">
+    import { createElement } from "react";
+    import { createRoot } from "react-dom/client";
+    import { Mascot } from "page-mascot";
+
+    createRoot(document.getElementById("mascot-root")).render(
+      createElement(Mascot, {
+        directions: "../images/cap-directions.webp",
+        reactions: "../images/cap-reactions.webp",
+        size: 230,
+        label: "cap"
+      })
+    );
+  </script>
+</body>
+</html>
