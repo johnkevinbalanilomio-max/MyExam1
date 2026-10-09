@@ -1,5 +1,4 @@
-/* Base */
-* {
+:root {
   box-sizing: border-box;
 }
 
@@ -10,7 +9,6 @@ body {
   font-family: 'Georgia', 'Times New Roman', serif;
 }
 
-/* Header */
 header {
   padding: 36px 6vw 24px;
   border-bottom: 1px solid #2a2521;
@@ -28,7 +26,6 @@ header h1 span {
   font-style: italic;
 }
 
-/* Navigation */
 nav {
   margin-top: 26px;
   display: flex;
@@ -68,7 +65,6 @@ nav a:hover::after, nav a.active::after {
   left: 0%;
 }
 
-/* Sections */
 main {
   padding: 40px 6vw 80px;
 }
@@ -94,7 +90,6 @@ main {
   }
 }
 
-/* Grid & cards */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -112,13 +107,43 @@ main {
   object-fit: cover;
   border-radius: 4px;
   box-shadow: 0 8px 18px rgba(0,0,0,0.45);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, filter 0.4s ease;
   cursor: pointer;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.poster::after {
+  content: attr(alt);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0) 100%);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
 }
 
 .poster:hover {
-  transform: rotate(-6deg) scale(1.05);
-  box-shadow: 0 14px 26px rgba(0,0,0,0.6);
+  transform: rotate(-8deg) scale(1.08) translateY(-6px);
+  box-shadow: 0 20px 36px rgba(0,0,0,0.7);
+  filter: brightness(1.05) contrast(1.05);
+}
+
+.poster:hover::after {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .card p {

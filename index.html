@@ -3,545 +3,498 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Daily News</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>MoviZone - Watch Movies, TV Shows and Anime</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="wrap">
-      <a href="#home" class="brand" aria-label="Daily News">
-        <span class="b1">DAILY</span>
-        <span class="b2">NEWS</span>
-      </a>
-
-      <div class="top-tools">
-        <div class="date">SAT, 10 OCT 2026</div>
-        <div class="search">
-          <input type="text" id="searchBox" placeholder="Search news..." aria-label="Search news" readonly>
-        </div>
+  <!-- ===== Header / navigation ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#"><span>Movi</span>Zone</a>
+      <nav aria-label="Main">
+        <ul class="nav-list">
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">Movies</a></li>
+          <li><a href="#">TV Shows</a></li>
+          <li><a href="#">Anime</a></li>
+        </ul>
+      </nav>
+      <div class="search" role="search">
+        <input type="search" placeholder="Search movies, shows..." aria-label="Search">
       </div>
     </div>
   </header>
 
-  <nav class="nav">
-    <div class="wrap">
-      <a href="#home">Home</a>
-      <a href="#world">World</a>
-      <a href="#business">Business</a>
-      <a href="#technology">Technology</a>
-      <a href="#sports">Sports</a>
-      <a href="#entertainment">Entertainment</a>
-      <a href="#health">Health</a>
-      <a href="#lifestyle">Lifestyle</a>
-
-      <div class="drop" tabindex="0">
-        <span tabindex="0">Activities</span>
-        <div class="dropdown">
-          <a href="Resume.html">Activity 1</a>
-          <a href="bullets.html">Activity 2</a>
-          <a href="table.html">Activity 3</a>
-          <a href="idcard.html">Activity 4</a>
-          <a href="movie.html">Activity 5</a>
+  <main>
+    <!-- ===== Hero banner ===== -->
+    <section class="hero" aria-label="Featured movie">
+      <img src="images/head.png" class="hero-bg" alt="">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-tag">Now streaming</p>
+          <h1>Furiosa: A Mad Max Saga</h1>
+          <p>Snatched from the Green Place of Many Mothers, young Furiosa fights through a post-apocalyptic wasteland, battling ruthless enemies to reclaim her homeland.</p>
+          <a class="btn" href="#">Watch Now</a>
+        </div>
+        <div class="hero-poster">
+          <img src="images/head2.png" class="poster" alt="Furiosa: A Mad Max Saga">
+          <span class="play" aria-hidden="true"></span>
         </div>
       </div>
+    </section>
+
+    <!-- ===== Movie sections ===== -->
+    <div class="container">
+
+      <!-- Trending Now -->
+      <section class="section" aria-labelledby="trending">
+        <div class="section-head">
+          <h2 id="trending">Trending Now</h2>
+          <a class="view-all" href="#">View All &rsaquo;</a>
+        </div>
+        <ul class="row row-wide">
+          <li>
+            <a class="card wide" href="#">
+              <span class="thumb">
+                <img src="images/a1.png" class="poster" alt="a1">
+                <em>Godzilla x Kong: The New Empire</em>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="card wide" href="#">
+              <span class="thumb">
+                <img src="images/a2.png" class="poster" alt="a2">
+                <em>Madame Web</em>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="card wide" href="#">
+              <span class="thumb">
+                <img src="images/a3.png" class="poster" alt="a3">
+                <em>The Boys</em>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="card wide" href="#">
+              <span class="thumb">
+                <img src="images/a4.png" class="poster" alt="a4">
+                <em>Doctor Who</em>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="card wide" href="#">
+              <span class="thumb">
+                <img src="images/a5.png" class="poster" alt="a5">
+                <em>Jujutsu Kaisen</em>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- New Releases -->
+      <section class="section" aria-labelledby="new">
+        <div class="section-head">
+          <h2 id="new">New Releases</h2>
+          <a class="view-all" href="#">View All &rsaquo;</a>
+        </div>
+        <ul class="row row-wide">
+          <li>
+            <a class="card wide" href="#">
+              <span class="thumb">
+                <img src="images/c1.png" class="poster" alt="c1">
+                <em>Atlas</em>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="card wide" href="#">
+              <span class="thumb">
+                <img src="images/c2.png" class="poster" alt="The Wages of Fear">
+                <em>The Wages of Fear</em>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="card wide" href="#">
+              <span class="thumb">
+                <img src="images/c3.png" class="poster" alt="Supacell">
+                <em>Supacell</em>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="card wide" href="#">
+              <span class="thumb">
+                <img src="images/c4.png" class="poster" alt="Vikings: Valhalla">
+                <em>Vikings: Valhalla</em>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="card wide" href="#">
+              <span class="thumb">
+                <img src="images/c5.png" class="poster" alt="c5">
+                <em>Rising Impact</em>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Top Rated -->
+      <section class="section" aria-labelledby="top">
+        <div class="section-head">
+          <h2 id="top">Top Rated</h2>
+          <a class="view-all" href="#">View All &rsaquo;</a>
+        </div>
+        <ul class="row">
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/d1.png" class="poster" alt="d1">
+              </span>
+              <span class="title">Game of Thrones</span>
+              <span class="meta">Series</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/d2.png" class="poster" alt="d2">
+              </span>
+              <span class="title">Spider-Man: No Way Home</span>
+              <span class="meta">2021</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/d3.png" class="poster" alt="d3">
+              </span>
+              <span class="title">Peaky Blinders</span>
+              <span class="meta">Series</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/d4.png" class="poster" alt="d4">
+              </span>
+              <span class="title">WandaVision</span>
+              <span class="meta">Series</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/d5.png" class="poster" alt="d5">
+              </span>
+              <span class="title">Loki</span>
+              <span class="meta">Series</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/d6.png" class="poster" alt="The Night Agent">
+              </span>
+              <span class="title">The Night Agent</span>
+              <span class="meta">Series</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Popular Series -->
+      <section class="section" aria-labelledby="series">
+        <div class="section-head">
+          <h2 id="series">Popular Series</h2>
+          <a class="view-all" href="#">View All &rsaquo;</a>
+        </div>
+        <ul class="row">
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/f1.png" class="poster" alt="One Piece">
+              </span>
+              <span class="title">One Piece</span>
+              <span class="meta">Series</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/f2.png" class="poster" alt="Doctor Strange">
+              </span>
+              <span class="title">Doctor Strange</span>
+              <span class="meta">Series</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/f3.png" class="poster" alt="Detective Conan">
+              </span>
+              <span class="title">Detective Conan</span>
+              <span class="meta">Series</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/f4.png" class="poster" alt="Mouse">
+              </span>
+              <span class="title">Mouse</span>
+              <span class="meta">Series</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/f5.png" class="poster" alt="Avatar">
+              </span>
+              <span class="title">Avatar</span>
+              <span class="meta">Series</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/f6.png" class="poster" alt="Transformer">
+              </span>
+              <span class="title">Transformer</span>
+              <span class="meta">Series</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Comedy Movies -->
+      <section class="section" aria-labelledby="comedy">
+        <div class="section-head">
+          <h2 id="comedy">Comedy Movies</h2>
+          <a class="view-all" href="#">View All &rsaquo;</a>
+        </div>
+        <ul class="row">
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/g1.png" class="poster" alt="The Mask">
+              </span>
+              <span class="title">The Mask</span>
+              <span class="meta">2012</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/g2.png" class="poster" alt="Little Brother">
+              </span>
+              <span class="title">Little Brother</span>
+              <span class="meta">2023</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/g3.png" class="poster" alt="Coyote vs Acme">
+              </span>
+              <span class="title">Coyote vs Acme</span>
+              <span class="meta">2015</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/g4.png" class="poster" alt="Jackass Best and Last">
+              </span>
+              <span class="title">Jackass Best and Last</span>
+              <span class="meta">2024</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/g5.png" class="poster" alt="Coming to America">
+              </span>
+              <span class="title">Coming to America</span>
+              <span class="meta">2020</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/g6.png" class="poster" alt="Friday">
+              </span>
+              <span class="title">Friday</span>
+              <span class="meta">1984</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Action Movies -->
+      <section class="section" aria-labelledby="action">
+        <div class="section-head">
+          <h2 id="action">Action Movies</h2>
+          <a class="view-all" href="#">View All &rsaquo;</a>
+        </div>
+        <ul class="row">
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/i1.png" class="poster" alt="Blood and Bone 2">
+              </span>
+              <span class="title">Blood and Bone 2</span>
+              <span class="meta">2022</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/i2.png" class="poster" alt="The Witch">
+              </span>
+              <span class="title">The Witch</span>
+              <span class="meta">2015</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/i3.png" class="poster" alt="Action Action">
+              </span>
+              <span class="title">Action Action</span>
+              <span class="meta">2021</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/i4.png" class="poster" alt="Spider-Man: No Way Home">
+              </span>
+              <span class="title">Spider-Man: No Way Home</span>
+              <span class="meta">2022</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/i5.png" class="poster" alt="Batman v Superman">
+              </span>
+              <span class="title">Batman v Superman</span>
+              <span class="meta">2024</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/i6.png" class="poster" alt="Spider-Man: Maverick">
+              </span>
+              <span class="title">Spider-Man: Maverick</span>
+              <span class="meta">2022</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Anime -->
+      <section class="section" aria-labelledby="anime">
+        <div class="section-head">
+          <h2 id="anime">Anime</h2>
+          <a class="view-all" href="#">View All &rsaquo;</a>
+        </div>
+        <ul class="row">
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/j1.png" class="poster" alt="Your Name">
+              </span>
+              <span class="title">Your Name</span>
+              <span class="meta">Anime</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/j2.png" class="poster" alt="Demon Slayer">
+              </span>
+              <span class="title">Demon Slayer</span>
+              <span class="meta">Anime</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/j3.png" class="poster" alt="Whisper of the Heart">
+              </span>
+              <span class="title">Whisper of the Heart</span>
+              <span class="meta">Anime</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/j4.png" class="poster" alt="Jujutsu Kaisen 0">
+              </span>
+              <span class="title">Jujutsu Kaisen 0</span>
+              <span class="meta">Anime</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/j5.png" class="poster" alt="Bleach">
+              </span>
+              <span class="title">Bleach</span>
+              <span class="meta">Anime</span>
+            </a>
+          </li>
+          <li>
+            <a class="card" href="#">
+              <span class="thumb">
+                <img src="images/j6.png" class="poster" alt="Boruto">
+              </span>
+              <span class="title">Boruto</span>
+              <span class="meta">Anime</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
     </div>
-  </nav>
-
-  <main class="wrap">
-    <section class="page" id="home">
-      <div class="breaking">
-        <b>BREAKING NEWS</b>
-        <p>Global markets rally as tech stocks hit new highs</p>
-      </div>
-
-      <section class="top">
-        <article class="hero">
-          <div class="ph"><img src="images/hero.jpg" alt="Hero Image"></div>
-          <div class="hero-text">
-            <span class="tag">WORLD</span>
-            <h1>A Brighter Future: Global Leaders Meet to Tackle Climate Change</h1>
-            <p>World leaders gather for a historic summit to discuss climate action, clean energy, and a sustainable future for the next generation.</p>
-            <a href="#" class="btn">Read More</a>
-          </div>
-        </article>
-
-        <aside class="trending">
-          <h3>Trending Now</h3>
-          <ul>
-            <li><span class="num">1</span><div class="ph"><img src="images/tech.png" alt="News image"></div>Tech giants invest in clean energy</li>
-            <li><span class="num">2</span><div class="ph"><img src="images/india.jfif" alt="News image"></div>India's economy shows strong growth</li>
-            <li><span class="num">3</span><div class="ph"><img src="images/ai.jfif" alt="News image"></div>New AI tool changes the game</li>
-            <li><span class="num">4</span><div class="ph"><img src="images/pace.jfif" alt="News image"></div>Space mission reaches new milestone</li>
-            <li><span class="num">5</span><div class="ph"><img src="images/hel.jfif" alt="News image"></div>Health experts share wellness tips</li>
-          </ul>
-        </aside>
-      </section>
-
-      <section class="grid4">
-        <article class="card">
-          <div class="ph"><img src="images/politics.jfif" alt="Politics Image"></div>
-          <div class="body">
-            <span class="tag">POLITICS</span>
-            <h4>New policy aims to boost digital economy</h4>
-            <span class="time">2 hours ago</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="ph"><img src="images/business.jfif" alt="Business Image"></div>
-          <div class="body">
-            <span class="tag">BUSINESS</span>
-            <h4>Markets surge as investor confidence grows</h4>
-            <span class="time">3 hours ago</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="ph"><img src="images/technology.jfif" alt="Technology Image"></div>
-          <div class="body">
-            <span class="tag">TECHNOLOGY</span>
-            <h4>Next-gen laptops set to launch this year</h4>
-            <span class="time">4 hours ago</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="ph"><img src="images/sports.jfif" alt="Sports Image"></div>
-          <div class="body">
-            <span class="tag">SPORTS</span>
-            <h4>Local team wins championship title</h4>
-            <span class="time">5 hours ago</span>
-          </div>
-        </article>
-      </section>
-
-      <section class="bottom">
-        <div class="panel">
-          <h3>Latest News</h3>
-          <ul class="latest">
-            <li>
-              <div class="ph"><img src="images/edu1.png" alt="News image"></div>
-              <div>
-                <h4>Education reforms to create more opportunities for youth</h4>
-                <span class="time">1 hour ago</span>
-              </div>
-            </li>
-
-            <li>
-              <div class="ph"><img src="images/news2.jfif" alt="News image"></div>
-              <div>
-                <h4>India and US strengthen strategic partnership</h4>
-                <span class="time">2 hours ago</span>
-              </div>
-            </li>
-
-            <li>
-              <div class="ph"><img src="images/news3.jfif" alt="News image"></div>
-              <div>
-                <h4>New smartphone features impress users worldwide</h4>
-                <span class="time">3 hours ago</span>
-              </div>
-            </li>
-
-            <li>
-              <div class="ph"><img src="images/edu2.png" alt="News image"></div>
-              <div>
-                <h4>WHO issues new guidelines for better public health</h4>
-                <span class="time">5 hours ago</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="panel editor">
-          <h3>Editor's Pick</h3>
-          <div class="ph"><img src="images/nature.jfif" alt="Editor's Pick"></div>
-          <h4>Top 10 Travel Destinations for 2026</h4>
-          <p>Explore the most beautiful places around the world that you should visit next year.</p>
-        </div>
-      </section>
-    </section>
-
-    <section class="page" id="world">
-      <div class="page-head">
-        <h2>World</h2>
-        <p>World news</p>
-      </div>
-
-      <article class="feature">
-        <div class="ph"><img src="images/word.jfif" alt="World Main"></div>
-        <div class="hero-text">
-          <span class="tag">WORLD</span>
-          <h1>Global leaders meet on climate action</h1>
-          <p>World leaders are gathering to strengthen efforts on climate action, clean energy, and long-term sustainability. The summit focuses on reducing emissions, protecting vulnerable communities, and creating a more sustainable future for generations to come.</p>
-          <a href="#world" class="btn">Read More</a>
-        </div>
-      </article>
-
-      <div class="grid4 grid3">
-        <article class="card">
-          <div class="ph"><img src="images/word1.jfif" alt="World 1"></div>
-          <div class="body"><span class="tag">WORLD</span><h4>Peace talks resume after months of delay</h4><span class="time">1 hour ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/word2.jpg" alt="World 2"></div>
-          <div class="body"><span class="tag">WORLD</span><h4>New trade deal signed by Asian nations</h4><span class="time">2 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/word3.jfif" alt="World 3"></div>
-          <div class="body"><span class="tag">WORLD</span><h4>Aid arrives in flood-hit regions</h4><span class="time">3 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/word4.jfif" alt="World 4"></div>
-          <div class="body"><span class="tag">WORLD</span><h4>Historic summit opens in Europe</h4><span class="time">4 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/word5.jfif" alt="World 5"></div>
-          <div class="body"><span class="tag">WORLD</span><h4>Countries agree on shared clean energy goals</h4><span class="time">5 hours ago</span></div>
-        </article>
-      </div>
-      <a class="back" href="#home">&larr; Back to Home</a>
-    </section>
-
-    <section class="page" id="business">
-      <div class="page-head">
-        <h2>Business</h2>
-        <p>Economy, business, and markets</p>
-      </div>
-
-      <article class="feature">
-        <div class="ph"><img src="images/b1.png" alt="Business Main"></div>
-        <div class="hero-text">
-          <span class="tag">BUSINESS</span>
-          <h1>Markets surge as investor confidence grows</h1>
-          <p>Government tax relief measures are expected to boost household spending and business investment, helping the economy move faster. Lower income and corporate taxes can increase take-home pay, encourage expansion, and stimulate demand across various industries.</p>
-          <a href="#business" class="btn">Read More</a>
-        </div>
-      </article>
-
-      <div class="grid4 grid3">
-        <article class="card">
-          <div class="ph"><img src="images/business2.jfif" alt="Business 1"></div>
-          <div class="body"><span class="tag">BUSINESS</span><h4>Small businesses embrace digital payments</h4><span class="time">1 hour ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/business3.jfif" alt="Business 2"></div>
-          <div class="body"><span class="tag">BUSINESS</span><h4>Bank announces lower loan rates</h4><span class="time">2 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/business4.jfif" alt="Business 3"></div>
-          <div class="body"><span class="tag">BUSINESS</span><h4>Startup raises record funding round</h4><span class="time">3 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/business5.jfif" alt="Business 4"></div>
-          <div class="body"><span class="tag">BUSINESS</span><h4>Exports rise for third straight quarter</h4><span class="time">4 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/business6.jfif" alt="Business 5"></div>
-          <div class="body"><span class="tag">BUSINESS</span><h4>Retail sales climb ahead of holidays</h4><span class="time">5 hours ago</span></div>
-        </article>
-      </div>
-      <a class="back" href="#home">&larr; Back to Home</a>
-    </section>
-
-    <section class="page" id="technology">
-      <div class="page-head">
-        <h2>Technology</h2>
-        <p>Gadgets, AI, and innovation</p>
-      </div>
-
-      <article class="feature">
-        <div class="ph"><img src="images/tec1.png" alt="Technology Main"></div>
-        <div class="hero-text">
-          <span class="tag">TECHNOLOGY</span>
-          <h1>Next-gen laptops set to launch this year</h1>
-          <p>This promises to be an interesting year for buyers of business class notebooks, 
-            with all three of the big vendors—Dell, HP, and Lenovo—showing major changes to their lineups, and
-            the big chip vendors offering new options that promise better performance and manageability. Many of 
-            these were shown at CES 2025 in Las Vegas, and I'll detail some highlights from the big vendors below, 
-            but first some general thoughts. I've been impressed by the improvements in performance and battery 
-            life in the current generation of laptops powered by the latest chips from AMD, Intel, and
-            Qualcomm. Compared with the machines I tested just a year ago, the improvements are noticeable.
-            Qualcomm's Snapdragon X Elite chips are good performers on native-ARM applications like the 
-            Microsoft Office suite (even if they have compatibility issues with some enterprise applications), 
-            while offering the best battery life I've seen. And while I and most of the other reviewers generally 
-            test performance when plugged in, Qualcomm argues that performance doesn't degrade as much on battery life. 
-            Meanwhile, both systems with AMD's Ryzen AI 300 ("Strix Point") or Intel's Core Ultra 200V ("Lunar Lake") are 
-            showing not only better performance than their previous generations, but also notably better battery life as well. 
-            That's a win for everyone.</p>
-          <a href="#technology" class="btn">Read More</a>
-        </div>
-      </article>
-
-      <div class="grid4 grid3">
-        <article class="card">
-          <div class="ph"><img src="images/ai.jfif" alt="Technology 1"></div>
-          <div class="body"><span class="tag">TECHNOLOGY</span><h4>New AI tool changes the game</h4><span class="time">1 hour ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/tec3.png" alt="Technology 2"></div>
-          <div class="body"><span class="tag">TECHNOLOGY</span><h4>Faster 6G tests begin in major cities</h4><span class="time">2 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/technology.jfif" alt="Technology 3"></div>
-          <div class="body"><span class="tag">TECHNOLOGY</span><h4>Smartphone makers unveil foldable models</h4><span class="time">3 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/tec2.png" alt="Technology 4"></div>
-          <div class="body"><span class="tag">TECHNOLOGY</span><h4>Cybersecurity tips for everyday users</h4><span class="time">4 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/tec5.png" alt="Technology 5"></div>
-          <div class="body"><span class="tag">TECHNOLOGY</span><h4>Electric vehicles get longer range batteries</h4><span class="time">5 hours ago</span></div>
-        </article>
-      </div>
-      <a class="back" href="#home">&larr; Back to Home</a>
-    </section>
-
-    <section class="page" id="sports">
-      <div class="page-head">
-        <h2>Sports</h2>
-        <p>Scores, highlights, and team news</p>
-      </div>
-
-      <article class="feature">
-        <div class="ph"><img src="images/sport1.png" alt="Sports Main"></div>
-        <div class="hero-text">
-          <span class="tag">SPORTS</span>
-          <h1>Local team wins championship title</h1>
-          <p>The inaugural season of Red Bluff United FC’s U12 Boys team ended with a
-             statement—a championship victory and a historic first for Red Bluff boys soccer.
-             Over Memorial Day weekend, United FC captured the Rogue Memorial Challenge
-             championship in Medford, Oregon, finishing the tournament undefeated and showcasing
-             the determination and composure that have defined the club’s first competitive season.
-             The title is believed to be the first Rogue Memorial Challenge championship won by a 
-             Red Bluff-area boys soccer team, making the accomplishment a historic milestone for the local 
-             soccer community.</p>
-          <a href="#sports" class="btn">Read More</a>
-        </div>
-      </article>
-
-      <div class="grid4 grid3">
-        <article class="card">
-          <div class="ph"><img src="images/sport2.png" alt="Sports 1"></div>
-          <div class="body"><span class="tag">SPORTS</span><h4>Rising star breaks national record</h4><span class="time">1 hour ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/sport3.png" alt="Sports 2"></div>
-          <div class="body"><span class="tag">SPORTS</span><h4>Basketball finals set for Sunday</h4><span class="time">2 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/sport4.png" alt="Sports 3"></div>
-          <div class="body"><span class="tag">SPORTS</span><h4>Coach announces new lineup</h4><span class="time">3 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/sport5.png" alt="Sports 4"></div>
-          <div class="body"><span class="tag">SPORTS</span><h4>Marathon draws thousands of runners</h4><span class="time">4 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/sport6.png" alt="Sports 5"></div>
-          <div class="body"><span class="tag">SPORTS</span><h4>Youth league opens new season</h4><span class="time">5 hours ago</span></div>
-        </article>
-      </div>
-      <a class="back" href="#home">&larr; Back to Home</a>
-    </section>
-
-    <section class="page" id="entertainment">
-      <div class="page-head">
-        <h2>Entertainment</h2>
-        <p>Movies, music, and showbiz</p>
-      </div>
-
-      <article class="feature">
-        <div class="ph"><img src="images/n1.png" alt="Entertainment Main"></div>
-        <div class="hero-text">
-          <span class="tag">ENTERTAINMENT</span>
-          <h1>New film tops the box office</h1>
-          <p>The Odyssey is a 2026 epic action fantasy film written and directed by Christopher Nolan,
-             who produced it with his wife Emma Thomas.
-             An adaptation of Homer's ancient Greek epic poem the Odyssey, it stars an ensemble 
-             cast including Matt Damon, Tom Holland, Anne Hathaway, 
-             Nolan began writing the script in March 2024 and secured the project with Universal
-              Pictures by October. The Odyssey was announced in December.
-             Casting took place from late 2024 through early 2025, and Damon was confirmed for
-              the lead role in February 2025. Nolan studied several 
-             translations of the Odyssey before deciding upon a realistic 
-             interpretation of Greek mythology, drawing inspiration from the epic historical
-             to August 2025 in Morocco, Greece, Italy, Scotland, Iceland, Western Sahara, and
-              Malta, as well as at the Universal Studios Lot in Los Angeles.
-             With an estimated budget of US$250 million, it is among the most
-             expensive films of Nolan's career, and the first feature film to be shot entirely
-             on IMAX's 70 mm film cameras.
-             The Odyssey premiered at the Odeon Luxe Leicester Square in London on July 6, 2026,
-              ahead of a theatrical release by Universal Pictures 
-             on July 17 in the United States and the United Kingdom. It was made available in IMAX
-              and multiple premium large formats. The film received 
-             acclaim for its direction, performances, and set pieces, though some criticized Nolan's
-              deviations from the source material. It has grossed US$1.768 billion worldwide,
-             becoming Nolan's highest-grossing film, the second-highest-grossing film of 2026, 
-             the highest-grossing R-rated film ever, the highest-grossing film distributed by Universal,
-             and the eleventh-highest grossing film of all time</p>
-          <a href="#entertainment" class="btn">Read More</a>
-        </div>
-      </article>
-
-      <div class="grid4 grid3">
-        <article class="card">
-          <div class="ph"><img src="images/n2.png" alt="Entertainment 1"></div>
-          <div class="body"><span class="tag">ENTERTAINMENT</span><h4>Concert tour announces more dates</h4><span class="time">1 hour ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/n3.png" alt="Entertainment 2"></div>
-          <div class="body"><span class="tag">ENTERTAINMENT</span><h4>Streaming series renewed for a new season</h4><span class="time">2 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/n4.png" alt="Entertainment 3"></div>
-          <div class="body"><span class="tag">ENTERTAINMENT</span><h4>Music awards reveal nominees</h4><span class="time">3 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/n5.png" alt="Entertainment 4"></div>
-          <div class="body"><span class="tag">ENTERTAINMENT</span><h4>Festival lineup excites fans</h4><span class="time">4 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/n6.png" alt="Entertainment 5"></div>
-          <div class="body"><span class="tag">ENTERTAINMENT</span><h4>Director shares plans for next project</h4><span class="time">5 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/enter1.png" alt="Entertainment 6"></div>
-          <div class="body"><span class="tag">ENTERTAINMENT</span><h4>Entertainment news roundup</h4><span class="time">6 hours ago</span></div>
-        </article>
-      </div>
-      <a class="back" href="#home">&larr; Back to Home</a>
-    </section>
-
-    <section class="page" id="health">
-      <div class="page-head">
-        <h2>Health</h2>
-        <p>Wellness and public health</p>
-      </div>
-
-      <article class="feature">
-        <div class="ph"><img src="images/h1.png" alt="Health Main"></div>
-        <div class="hero-text">
-          <span class="tag">HEALTH</span>
-          <h1>WHO issues new guidelines for better public health</h1>
-          <p>Overview
-            Consuming a healthy diet throughout the life-course helps 
-            to prevent malnutrition in all its forms as well as a range 
-            of noncommunicable diseases (NCDs) and conditions.
-            However, change in food production and food systems, rapid urbanization 
-            and changing lifestyles have led to a shift in dietary patterns.
-            People are now consuming more highly processed foods high in unhealthy fats, free sugars 
-            and salt/sodium, and many people do not eat enough fruit
-            and vegetables or consume sufficient dietary fibre.
-            The exact make-up of a diversified, balanced and healthy diet will vary 
-            depending on individual characteristics (e.g. age, gender, 
-            lifestyle and degree of physical activity), cultural context,
-            locally-available foods and dietary customs.
-            However, the basic principles of what constitutes a healthy diet remain 
-            the same and are described in four principles:
-            adequacy: meets, without exceeding, micronutrient and macronutrient 
-            needs such that deficiencies are prevented;
-            balance: total energy intake is balanced with energy expenditure, 
-            with an adequate balance across the three primary sources of energy, protein, fats and carbohydrates;
-            moderation: limited intake of nutrients, ingredients, and foods that may be detrimental to health;
-            diversity: inclusion of a wide variety of nutritious foods within and across food groups.
-            Diets embracing these four core principles promote health throughout the life course.</p>
-          <a href="#health" class="btn">Read More</a>
-        </div>
-      </article>
-
-      <div class="grid4 grid3">
-        <article class="card">
-          <div class="ph"><img src="images/h2.png" alt="Health 1"></div>
-          <div class="body"><span class="tag">HEALTH</span><h4>Experts share simple wellness tips</h4><span class="time">1 hour ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/h3.png" alt="Health 2"></div>
-          <div class="body"><span class="tag">HEALTH</span><h4>Study links sleep to better focus</h4><span class="time">2 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/h4.png" alt="Health 3"></div>
-          <div class="body"><span class="tag">HEALTH</span><h4>Hospitals expand free check-up programs</h4><span class="time">3 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/h5.png" alt="Health 4"></div>
-          <div class="body"><span class="tag">HEALTH</span><h4>Healthy meals on a small budget</h4><span class="time">4 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/h6.png" alt="Health 5"></div>
-          <div class="body"><span class="tag">HEALTH</span><h4>Staying active at home: easy routines</h4><span class="time">5 hours ago</span></div>
-        </article>
-      </div>
-      <a class="back" href="#home">&larr; Back to Home</a>
-    </section>
-
-    <section class="page" id="lifestyle">
-      <div class="page-head">
-        <h2>Lifestyle</h2>
-        <p>Living, food, and travel</p>
-      </div>
-
-      <article class="feature">
-        <div class="ph"><img src="images/l1.png" alt="Lifestyle Main"></div>
-        <div class="hero-text">
-          <span class="tag">LIFESTYLE</span>
-          <h1>Top 10 travel destinations for 2026</h1>
-          <p>Travelers are looking for scenic escapes, cultural experiences, and relaxing destinations that offer comfort, beauty, and unforgettable memories in the coming year.</p>
-          <a href="#lifestyle" class="btn">Read More</a>
-        </div>
-      </article>
-
-      <div class="grid4 grid3">
-        <article class="card">
-          <div class="ph"><img src="images/l2.png" alt="Lifestyle 1"></div>
-          <div class="body"><span class="tag">LIFESTYLE</span><h4>Easy home decor ideas for small spaces</h4><span class="time">1 hour ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/l3.png" alt="Lifestyle 2"></div>
-          <div class="body"><span class="tag">LIFESTYLE</span><h4>Local street food worth trying</h4><span class="time">2 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/l4.png" alt="Lifestyle 3"></div>
-          <div class="body"><span class="tag">LIFESTYLE</span><h4>Weekend getaways near the city</h4><span class="time">3 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/l5.png" alt="Lifestyle 4"></div>
-          <div class="body"><span class="tag">LIFESTYLE</span><h4>Simple habits for a calmer routine</h4><span class="time">4 hours ago</span></div>
-        </article>
-        <article class="card">
-          <div class="ph"><img src="images/l6.png" alt="Lifestyle 5"></div>
-          <div class="body"><span class="tag">LIFESTYLE</span><h4>Fashion trends to watch this season</h4><span class="time">5 hours ago</span></div>
-        </article>
-      </div>
-      <a class="back" href="#home">&larr; Back to Home</a>
-    </section>
   </main>
 
-  <footer class="footer">
-    <div class="wrap">
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="logo" href="#"><span>Movi</span>Zone</a>
       <div>
-        <a href="#home" class="brand foot" aria-label="Daily News">
-          <span class="b1">DAILY</span><span class="b2">NEWS</span>
-        </a>
-        <p>Your Trusted Source for Latest News</p>
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">Movies</a></li>
+          <li><a href="#">TV Shows</a></li>
+        </ul>
       </div>
-
-      <ul class="flinks">
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
-      </ul>
-
       <div>
-        <div class="social">
-          <a href="https://www.facebook.com/" aria-label="Facebook">f</a>
-          <a href="https://www.instagram.com/?hl=en" aria-label="Instagram">ig</a>
-          <a href="https://www.youtube.com/" aria-label="YouTube">▶</a>
-          <a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a>
+        <h3>Address</h3>
+        <address>Address: 1234 Elm Street, Suite 567,<br>Downtown City, State, ZIP Code</address>
+        <h3>Email</h3>
+        <p><a href="mailto:info@movizone.com">info@movizone.com</a></p>
+      </div>
+      <div>
+        <h3>Phone</h3>
+        <div class="phones">
+          <p>Service:<br>(123) 456-7890</p>
+          <p>Office Reception:<br>(123) 456-7890</p>
         </div>
-        <p>@ 2026 Daily News. All rights reserved.</p>
       </div>
     </div>
   </footer>
