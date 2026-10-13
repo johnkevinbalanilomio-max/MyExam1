@@ -3,6 +3,7 @@ const articleCategory = document.querySelector("#article-category");
 const articleTitle = document.querySelector("#article-title");
 const articleImage = document.querySelector(".article-dialog__image");
 const articleText = document.querySelector(".article-dialog__text");
+<<<<<<< HEAD
 const themeStorageKey = "daily-news-theme";
 const themeButton = document.createElement("button");
 const topTools = document.querySelector(".top-tools");
@@ -133,6 +134,8 @@ themeButton.addEventListener("click", () => {
   setTheme(nextTheme);
   localStorage.setItem(themeStorageKey, nextTheme);
 });
+=======
+>>>>>>> 8815f75d76f0b6a177680c386ecc93b67b6ab29a
 
 document.querySelectorAll(".feature .btn, .hero .btn").forEach((button) => {
   button.addEventListener("click", () => {
@@ -158,6 +161,7 @@ articleDialog.addEventListener("click", (event) => {
     articleDialog.close();
   }
 });
+<<<<<<< HEAD
 
 const revealTargets = document.querySelectorAll(
   ".header .wrap, .nav .wrap, .breaking, .hero, .trending, .page-head, .feature, .card, .panel, .trending li, .latest li, .back, .footer .wrap"
@@ -185,3 +189,5 @@ if (prefersReducedMotion || !("IntersectionObserver" in window)) {
     revealObserver.observe(element);
   });
 }
+=======
+>>>>>>> 8815f75d76f0b6a177680c386ecc93b67b6ab29a

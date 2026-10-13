@@ -544,6 +544,7 @@ nav {
   max-width: none;
   object-fit: cover;
   object-position: center;
+<<<<<<< HEAD
 }
 
 /* MoviZone visual refresh */
@@ -1090,4 +1091,6 @@ main > .container {
     opacity: 1;
     transform: none;
   }
+=======
+>>>>>>> 8815f75d76f0b6a177680c386ecc93b67b6ab29a
 }
