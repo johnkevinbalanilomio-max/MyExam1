@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <title>ALL about frames</title>
+  <link rel="stylesheet" href="../activity-nav.css">
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      box-sizing: border-box;
+      padding: 8px;
+      background: #f1f5f9;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      display: grid;
+      height: 100%;
+      grid-template-rows: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    nav a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 12px;
+      border-radius: 6px;
+      background: #166534;
+      color: #fff;
+      font-size: 27px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      background: #14532d;
+    }
+
+    nav .activity-home {
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="activity-home" href="../midterm,exam/home.html" target="_top" aria-label="Back to Daily News home">
+    <span class="activity-home__arrow" aria-hidden="true">&larr;</span>
+    <span>Back to Home</span>
+  </a>
+  <a href="../resume/index.html" target="mainstage">Resume</a>
+  <a href="../bullets/bullets.html" target="mainstage">Bullets</a>
+  <a href="../table/table.html" target="mainstage">Calendar &amp; Table</a>
+  <a href="loser-video.html" target="mainstage">LOSER VIDEO</a>
+</nav>
+
+</body>
+</html>

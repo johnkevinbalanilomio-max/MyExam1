@@ -1,0 +1,69 @@
+.activity-home {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 8px 14px 8px 10px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 999px;
+  background: #111827;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, .3);
+  color: #fff;
+  font: 600 14px/1.2 "Segoe UI", Arial, sans-serif;
+  text-decoration: none;
+  transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.activity-home__arrow {
+  display: inline-grid;
+  width: 26px;
+  height: 26px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e11d2e;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.activity-home:hover,
+.activity-home:focus-visible {
+  transform: translateY(-2px);
+  background: #263247;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, .35);
+}
+
+.activity-home:focus-visible {
+  outline: 3px solid #60a5fa;
+  outline-offset: 3px;
+}
+
+nav .activity-home {
+  position: static;
+  min-width: 0;
+  min-height: 0;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 6px;
+  background: #991b1b;
+  text-align: center;
+}
+
+nav .activity-home:hover,
+nav .activity-home:focus-visible {
+  background: #7f1d1d;
+}
+
+@media(max-width:560px) {
+  .activity-home {
+    top: 8px;
+    left: 8px;
+    min-height: 38px;
+    padding: 6px 11px 6px 7px;
+    font-size: 13px;
+  }
+}

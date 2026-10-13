@@ -1,0 +1,283 @@
+:root {
+  --ink: #1b2a41;
+  --paper: #f3f6fb;
+  --card: #ffffff;
+  --line: #d5deec;
+  --blue: #1f4fd8;
+  --blue-soft: #e4ebfc;
+  --red: #d7263d;
+  --red-soft: #fde8eb;
+  --tesda: #1f4fd8;
+  --deped: #d7263d;
+  --ched: #0f8a5f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 32px 16px 64px;
+  color: var(--ink);
+  font-family: "Trebuchet MS","Segoe UI",Arial,sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  background: linear-gradient(135deg,
+   rgba(15,23,41,0.85) 0%, rgba(30,58,95,0.80) 35%,
+   rgba(45,90,135,0.75) 65%, rgba(74,119,122,0.70) 100%),
+    url("../images/back1.png") center/cover no-repeat fixed;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -120px;
+  right: -120px;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(31,79,216,0.45), transparent 70%);
+  border-radius: 50%;
+  filter: blur(10px);
+  z-index: 0;
+  animation: float1 14s ease-in-out infinite;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -150px;
+  left: -150px;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(215,38,61,0.35), transparent 70%);
+  border-radius: 50%;
+  filter: blur(10px);
+  z-index: 0;
+  animation: float2 18s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -30px) scale(1.1); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-40px, 30px) scale(1.15); }
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  display: grid;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.mascot-root {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+}
+
+header {
+  text-align: center;
+}
+
+.brand {
+  display: block;
+  margin: 0 auto 10px;
+  height: 90px;
+  width: auto;
+}
+
+.logo {
+  height: 90px;
+  width: 90px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin: 0 0 4px;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 0 0 12px;
+  color: #e8eefc;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.3);
+}
+
+p.sub {
+  margin: 0 0 16px;
+  color: #c8d4ec;
+}
+
+.wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: rgba(255,255,255,0.97);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35), 0 2px 8px rgba(0,0,0,0.2);
+  backdrop-filter: blur(4px);
+}
+
+th, td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #e3eaf3;
+  border-right: 1px solid #e3eaf3;
+  text-align: center;
+  color: var(--ink);
+}
+
+tr>:last-child {
+  border-right: 0;
+}
+
+tbody tr:last-child>*, table tr:last-child>* {
+  border-bottom: 0;
+}
+
+th {
+  background: var(--blue);
+  color: #fff;
+  font-weight: 700;
+}
+
+caption {
+  caption-side: top;
+  text-align: left;
+}
+
+.cal th.month {
+  font-size: 1.2rem;
+  padding: 16px;
+  letter-spacing: .02em;
+  background: linear-gradient(90deg, #1f4fd8, #4a777a);
+  color: #fff;
+}
+
+.cal .dow td {
+  background: var(--blue-soft);
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.cal .dow td:first-child {
+  color: var(--red);
+}
+
+.cal td {
+  width: 14.28%;
+  height: 52px;
+}
+
+.cal td.out {
+  color: #a4b0c6;
+}
+
+.cal td.mark {
+  background: var(--red-soft);
+  color: var(--red);
+  font-weight: 700;
+}
+
+.cal td:hover:not(.out) {
+  background: var(--blue-soft);
+}
+
+.cal td.mark:hover {
+  background: var(--red-soft);
+}
+
+.courses th.title {
+  background: linear-gradient(90deg,#f5a6c0,#f78fb3);
+  color: #4a1030;
+  font-size: 1.1rem;
+  padding: 16px;
+}
+
+.courses td.agency {
+  font-weight: 700;
+  width: 34%;
+  background: #fafbfe;
+}
+
+section {
+  background: rgba(255,255,255,0.92);
+  border-radius: 14px;
+  padding: 24px 22px 22px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+section h2 {
+  color: var(--blue);
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--blue-soft);
+  display: inline-block;
+}
+
+.badge {
+  display: inline-grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px currentColor;
+}
+
+.tesda {
+  color: var(--tesda);
+}
+
+.tesda .badge {
+  background: var(--tesda);
+}
+
+.deped {
+  color: var(--deped);
+}
+
+.deped .badge {
+  background: var(--deped);
+}
+
+.ched {
+  color: var(--ched);
+}
+
+.ched .badge {
+  background: var(--ched);
+}
+
+.courses td.prog {
+  text-align: left;
+  padding-left: 24px;
+}
