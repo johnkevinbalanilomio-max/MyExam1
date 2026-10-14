@@ -6,20 +6,19 @@
   <title>Daily News | Lifestyle</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;
-  700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="home-page section-page">
   <header class="header">
     <div class="wrap">
+      <time class="date" data-live-clock></time>
       <a href="home.html" class="brand" aria-label="Daily News">
         <span class="b1">DAILY</span>
         <span class="b2">NEWS</span>
       </a>
 
       <div class="top-tools">
-        <time class="date" data-live-clock></time>
         <div class="search">
           <input type="text" id="searchBox" placeholder="Search news..." aria-label="Search news" readonly>
         </div>
@@ -39,9 +38,9 @@
       <a class="active" href="lifestyle.html">Lifestyle</a>
 
       <div class="drop" tabindex="0">
-        <span tabindex="0">Activities</span>
+        <span tabindex="0">More</span>
         <div class="dropdown">
-          <a href="../resume/resume.html">Activity 1</a>
+          <a href="../resume/index.html">Activity 1</a>
           <a href="../bullets/bullets.html">Activity 2</a>
           <a href="../table/table.html">Activity 3</a>
           <a href="../frameset/exercise2.html">Activity 4</a>
@@ -54,6 +53,7 @@
 
   <main class="wrap"><section class="page" id="lifestyle">
       <div class="page-head">
+        <span class="eyebrow">LIVING WELL</span>
         <h2>Lifestyle</h2>
         <p>Living, food, and travel</p>
       </div>
@@ -64,11 +64,18 @@
           <span class="tag">LIFESTYLE</span>
           <h1>Top 10 travel destinations for 2026</h1>
           <p>Travelers are looking for scenic escapes, cultural experiences, and relaxing destinations that offer comfort, beauty, and unforgettable memories in the coming year.</p>
-          <button type="button" class="btn">Read More</button>
+          <button type="button" class="btn">Read Full Story</button>
         </div>
       </article>
 
       <div class="grid4 grid3">
+        <div class="section-heading section-heading-wide">
+          <div>
+            <span class="eyebrow">THE GOOD LIFE</span>
+            <h2>Latest lifestyle stories</h2>
+          </div>
+          <span class="section-count">05 STORIES</span>
+        </div>
         <article class="card">
           <div class="ph"><img src="../images/l2.png" alt="Lifestyle 1"></div>
           <div class="body"><span class="tag">LIFESTYLE</span><h4>Easy home decor ideas for small spaces</h4><span class="time">1 hour ago</span></div>
@@ -90,7 +97,7 @@
           <div class="body"><span class="tag">LIFESTYLE</span><h4>Fashion trends to watch this season</h4><span class="time">5 hours ago</span></div>
         </article>
       </div>
-      <a class="back" href="home.html">&larr; Back to Home</a>
+      <a class="back" href="home.html">&larr; Back</a>
     </section>
   </main>
 

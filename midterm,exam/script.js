@@ -126,7 +126,10 @@ function setTheme(theme) {
   themeLabel.textContent = isDark ? "Light mode" : "Dark mode";
 }
 
-setTheme(localStorage.getItem(themeStorageKey) === "dark" ? "dark" : "light");
+const savedTheme = localStorage.getItem(themeStorageKey);
+setTheme(savedTheme === "dark" || (!savedTheme && document.body.classList.contains("home-page"))
+  ? "dark"
+  : "light");
 
 themeButton.addEventListener("click", () => {
   const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
@@ -147,6 +150,56 @@ document.querySelectorAll(".feature .btn, .hero .btn").forEach((button) => {
     articleText.replaceChildren(content.querySelector("p").cloneNode(true));
     articleDialog.showModal();
   });
+});
+
+document.querySelectorAll("[data-latest-filter]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const category = button.dataset.latestFilter;
+
+    document.querySelectorAll("[data-latest-filter]").forEach((filterButton) => {
+      const isActive = filterButton === button;
+      filterButton.classList.toggle("is-active", isActive);
+      filterButton.setAttribute("aria-pressed", String(isActive));
+    });
+
+    document.querySelectorAll(".latest [data-news-category]").forEach((story) => {
+      story.hidden = category !== "all" && story.dataset.newsCategory !== category;
+    });
+  });
+});
+
+document.querySelectorAll(".bookmark-button").forEach((button) => {
+  button.addEventListener("click", () => {
+    const isSaved = button.getAttribute("aria-pressed") === "true";
+    const storyLabel = button.getAttribute("aria-label")
+      .replace(/^(Save|Remove) /, "")
+      .replace(/ from saved stories$/, "");
+    button.setAttribute("aria-pressed", String(!isSaved));
+    button.textContent = isSaved ? "\u2661" : "\u2665";
+    button.setAttribute(
+      "aria-label",
+      isSaved ? `Save ${storyLabel}` : `Remove ${storyLabel} from saved stories`
+    );
+  });
+});
+
+const featuredStoryButton = document.querySelector(".featured-story-button");
+featuredStoryButton?.addEventListener("click", () => {
+  const storyImage = featuredStoryButton.querySelector("img");
+  articleCategory.textContent = featuredStoryButton.querySelector(".tag").textContent;
+  articleTitle.textContent = featuredStoryButton.querySelector(".featured-story-title").textContent;
+  articleImage.src = storyImage.src;
+  articleImage.alt = storyImage.alt;
+  articleText.replaceChildren(document.createTextNode(
+    "From pristine beaches to hidden gems, explore the best places to visit next year."
+  ));
+  articleDialog.showModal();
+});
+
+document.querySelector(".newsletter-form")?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const status = document.querySelector(".newsletter-status");
+  status.textContent = "Newsletter sign-up is not connected yet. Please check back soon.";
 });
 
 document.querySelector(".article-dialog__close").addEventListener("click", () => {

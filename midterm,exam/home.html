@@ -9,18 +9,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="home-page">
   <header class="header">
     <div class="wrap">
+      <time class="date" data-live-clock></time>
       <a href="home.html" class="brand" aria-label="Daily News">
         <span class="b1">DAILY</span>
         <span class="b2">NEWS</span>
       </a>
 
       <div class="top-tools">
-        <time class="date" data-live-clock></time>
+        <div class="header-weather" aria-label="Weather forecast">
+          <span class="weather-symbol" aria-hidden="true">☁</span>
+          <span><strong>Manila</strong><small>Forecast offline</small></span>
+        </div>
         <div class="search">
-          <input type="text" id="searchBox" placeholder="Search news..." aria-label="Search news" readonly>
+          <input type="text" id="searchBox" placeholder="Search news, topics, or keywords..." aria-label="Search news" readonly>
         </div>
       </div>
     </div>
@@ -36,9 +40,8 @@
       <a href="entertainment.html">Entertainment</a>
       <a href="health.html">Health</a>
       <a href="lifestyle.html">Lifestyle</a>
-
       <div class="drop" tabindex="0">
-        <span tabindex="0">Activities</span>
+        <span tabindex="0">More</span>
         <div class="dropdown">
           <a href="../resume/index.html">Activity 1</a>
           <a href="../bullets/bullets.html">Activity 2</a>
@@ -53,8 +56,12 @@
 
   <main class="wrap"><section class="page" id="home">
       <div class="breaking">
-        <b>BREAKING NEWS</b>
-        <p>Global markets rally as tech stocks hit new highs</p>
+        <b><span aria-hidden="true">&#9889;</span> Breaking News</b>
+        <div class="breaking-ticker" aria-label="Latest headlines">
+          <a href="world.html">Global leaders meet to tackle climate change at latest summit</a>
+          <a href="business.html">Markets rally as investor confidence grows</a>
+          <a href="technology.html">New technology reshapes the way people work</a>
+        </div>
       </div>
 
       <section class="top">
@@ -71,7 +78,12 @@
               challenges. They also encourage businesses and citizens to adopt sustainable practices and reduce their
               carbon footprint. Through cooperation and responsible action, the world hopes to build a cleaner, 
               safer, and brighter future for the next generation.</p>
-            <button type="button" class="btn">Read More</button>
+            <div class="hero-meta">
+              <span>◷ &nbsp;2 hours ago</span>
+              <span>◎ &nbsp;12.4K views</span>
+              <button type="button" class="bookmark-button" aria-label="Save featured story" aria-pressed="false">&#9825;</button>
+            </div>
+            <button type="button" class="btn">Read Full Story</button>
           </div>
         </article>
 
@@ -107,88 +119,211 @@
         </aside>
       </section>
 
-      <section class="grid4">
-        <article class="card">
-          <div class="ph"><img src="../images/p1.png" alt="Politics Image"></div>
-          <div class="body">
-            <span class="tag">POLITICS</span>
-            <h4>New policy aims to boost digital economy</h4>
-            <span class="time">2 hours ago</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="ph"><img src="../images/p2.png" alt="Business Image"></div>
-          <div class="body">
-            <span class="tag">BUSINESS</span>
-            <h4>Markets surge as investor confidence grows</h4>
-            <span class="time">3 hours ago</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="ph"><img src="../images/p3.png" alt="Technology Image"></div>
-          <div class="body">
-            <span class="tag">TECHNOLOGY</span>
-            <h4>Next-gen laptops set to launch this year</h4>
-            <span class="time">4 hours ago</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="ph"><img src="../images/p4.png" alt="Sports Image"></div>
-          <div class="body">
-            <span class="tag">SPORTS</span>
-            <h4>Local team wins championship title</h4>
-            <span class="time">5 hours ago</span>
-          </div>
-        </article>
+      <section class="quick-categories" aria-labelledby="quick-categories-title">
+        <div class="quick-categories-heading">
+          <h2 id="quick-categories-title"><span aria-hidden="true">&#9829;</span> Quick Categories</h2>
+          <span>Choose a desk</span>
+        </div>
+        <div class="category-links">
+          <a href="world.html"><span aria-hidden="true">◎</span> World</a>
+          <a href="business.html"><span aria-hidden="true">◈</span> Business</a>
+          <a href="technology.html"><span aria-hidden="true">▦</span> Technology</a>
+          <a href="sports.html"><span aria-hidden="true">◉</span> Sports</a>
+          <a href="entertainment.html"><span aria-hidden="true">♫</span> Entertainment</a>
+          <a href="health.html"><span aria-hidden="true">✚</span> Health</a>
+          <a href="lifestyle.html"><span aria-hidden="true">✿</span> Lifestyle</a>
+        </div>
       </section>
 
-      <section class="bottom">
-        <div class="panel">
-          <h3>Latest News</h3>
+      <section class="briefing" aria-labelledby="briefing-title">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">THE DAILY BRIEFING</span>
+            <h2 id="briefing-title">In 60 seconds</h2>
+          </div>
+          <span class="briefing-note">The stories shaping today</span>
+        </div>
+        <div class="briefing-grid">
+          <article>
+            <span class="briefing-index">01</span>
+            <div><span class="tag">WORLD</span><p>Global leaders put climate action back at the center of the conversation.</p></div>
+          </article>
+          <article>
+            <span class="briefing-index">02</span>
+            <div><span class="tag">BUSINESS</span><p>Investor confidence rises as markets respond to new growth signals.</p></div>
+          </article>
+          <article>
+            <span class="briefing-index">03</span>
+            <div><span class="tag">TECHNOLOGY</span><p>New AI tools are changing how people work, learn, and create.</p></div>
+          </article>
+          <article>
+            <span class="briefing-index">04</span>
+            <div><span class="tag">HEALTH</span><p>Simple everyday habits remain one of the strongest paths to wellness.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="newsroom-layout">
+        <div class="newsroom-main">
+          <section class="grid4" aria-labelledby="newsroom-title">
+            <div class="section-heading section-heading-wide">
+              <div>
+                <span class="eyebrow">THE LATEST</span>
+                <h2 id="newsroom-title">Around the newsroom</h2>
+              </div>
+              <a href="world.html">Explore all stories <span aria-hidden="true">&rarr;</span></a>
+            </div>
+            <article class="card">
+              <div class="ph"><img src="../images/p1.png" alt="Regional leaders at a summit"></div>
+              <div class="body">
+                <span class="tag">WORLD</span>
+                <h4>ASEAN countries unite for a stronger, more resilient region</h4>
+                <div class="card-meta"><span>◷ 1 hour ago</span><span>◎ 5.6K views</span><button type="button" class="bookmark-button" aria-label="Save ASEAN story" aria-pressed="false">&#9825;</button></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="ph"><img src="../images/u2.png" alt="Colleagues collaborating on a business project"></div>
+              <div class="body">
+                <span class="tag">BUSINESS</span>
+                <h4>Young Filipino innovators showcase solutions at tech expo</h4>
+                <div class="card-meta"><span>◷ 2 hours ago</span><span>◎ 4.3K views</span><button type="button" class="bookmark-button" aria-label="Save business story" aria-pressed="false">&#9825;</button></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="ph"><img src="../images/p3.png" alt="New technology products on display"></div>
+              <div class="body">
+                <span class="tag">TECHNOLOGY</span>
+                <h4>New AI tool is changing how people work, learn, and live</h4>
+                <div class="card-meta"><span>◷ 3 hours ago</span><span>◎ 3.7K views</span><button type="button" class="bookmark-button" aria-label="Save technology story" aria-pressed="false">&#9825;</button></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="ph"><img src="../images/p4.png" alt="Championship basketball team"></div>
+              <div class="body">
+                <span class="tag">SPORTS</span>
+                <h4>Local team wins championship in thrilling final</h4>
+                <div class="card-meta"><span>◷ 4 hours ago</span><span>◎ 2.1K views</span><button type="button" class="bookmark-button" aria-label="Save sports story" aria-pressed="false">&#9825;</button></div>
+              </div>
+            </article>
+          </section>
+        </div>
+
+        <aside class="most-read panel" aria-labelledby="most-read-title">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">READER FAVORITES</span>
+              <h2 id="most-read-title">Most Read</h2>
+            </div>
+            <a href="world.html">View all <span aria-hidden="true">&rarr;</span></a>
+          </div>
+          <ol class="most-read-list">
+            <li><span class="most-read-number">1</span><img src="../images/12.png" alt=""><div><a href="world.html">Global leaders meet on climate action</a><span>WORLD &nbsp;·&nbsp; 12.4K views</span></div></li>
+            <li><span class="most-read-number">2</span><img src="../images/p2.png" alt=""><div><a href="business.html">Markets surge as investor confidence grows</a><span>BUSINESS &nbsp;·&nbsp; 9.7K views</span></div></li>
+            <li><span class="most-read-number">3</span><img src="../images/3.png" alt=""><div><a href="technology.html">New AI tool changes the game</a><span>TECHNOLOGY &nbsp;·&nbsp; 8.4K views</span></div></li>
+            <li><span class="most-read-number">4</span><img src="../images/p4.png" alt=""><div><a href="sports.html">Local team wins championship title</a><span>SPORTS &nbsp;·&nbsp; 7.6K views</span></div></li>
+            <li><span class="most-read-number">5</span><img src="../images/h2.png" alt=""><div><a href="health.html">Health experts share wellness tips</a><span>HEALTH &nbsp;·&nbsp; 6.2K views</span></div></li>
+          </ol>
+        </aside>
+      </section>
+
+      <section class="news-dashboard">
+        <div class="panel latest-panel">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">YOUR DAILY BRIEFING</span>
+              <h2>Latest News</h2>
+            </div>
+            <a href="world.html">View all <span aria-hidden="true">&rarr;</span></a>
+          </div>
+          <div class="latest-tabs" role="group" aria-label="Filter latest news">
+            <button type="button" class="is-active" data-latest-filter="all" aria-pressed="true">Latest</button>
+            <button type="button" data-latest-filter="world" aria-pressed="false">World</button>
+            <button type="button" data-latest-filter="business" aria-pressed="false">Business</button>
+            <button type="button" data-latest-filter="technology" aria-pressed="false">Technology</button>
+            <button type="button" data-latest-filter="health" aria-pressed="false">Health</button>
+          </div>
           <ul class="latest">
-            <li>
+            <li data-news-category="world">
               <div class="ph"><img src="../images/edu1.png" alt="News image"></div>
               <div>
                 <h4>Education reforms to create more opportunities for youth</h4>
-                <span class="time">1 hour ago</span>
+                <span class="latest-meta">WORLD &nbsp;·&nbsp; <span class="time">1 hour ago</span></span>
               </div>
             </li>
 
-            <li>
+            <li data-news-category="business">
               <div class="ph"><img src="../images/p5.png" alt="News image"></div>
               <div>
                 <h4>India and US strengthen strategic partnership</h4>
-                <span class="time">2 hours ago</span>
+                <span class="latest-meta">BUSINESS &nbsp;·&nbsp; <span class="time">2 hours ago</span></span>
               </div>
             </li>
 
-            <li>
+            <li data-news-category="technology">
               <div class="ph"><img src="../images/p6.png" alt="News image"></div>
               <div>
                 <h4>New smartphone features impress users worldwide</h4>
-                <span class="time">3 hours ago</span>
+                <span class="latest-meta">TECHNOLOGY &nbsp;·&nbsp; <span class="time">3 hours ago</span></span>
               </div>
             </li>
 
-            <li>
+            <li data-news-category="health">
               <div class="ph"><img src="../images/p8.png" alt="News image"></div>
               <div>
                 <h4>WHO issues new guidelines for better public health</h4>
-                <span class="time">5 hours ago</span>
+                <span class="latest-meta">HEALTH &nbsp;·&nbsp; <span class="time">5 hours ago</span></span>
               </div>
             </li>
           </ul>
         </div>
 
-        <div class="panel editor">
-          <h3>Editor's Pick</h3>
-          <div class="ph"><img src="../images/p7.png" alt="Editor's Pick"></div>
-          <h4>Top 10 Travel Destinations for 2026</h4>
-          <p>Explore the most beautiful places around the world that you should visit next year.</p>
-        </div>
+        <article class="panel editor">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">EDITOR'S PICK</span>
+              <h2>Featured Story</h2>
+            </div>
+            <a href="lifestyle.html">More <span aria-hidden="true">&rarr;</span></a>
+          </div>
+          <button type="button" class="featured-story-button" aria-label="Read featured travel story">
+            <span class="ph"><img src="../images/p7.png" alt="Tropical beach and palm trees"></span>
+            <span class="tag">LIFESTYLE</span>
+            <span class="featured-story-title">Top 10 Travel Destinations for 2026</span>
+          </button>
+          <p>From pristine beaches to hidden gems, explore the best places to visit next year.</p>
+          <div class="card-meta"><span>◷ 5 hours ago</span><span>◎ 8.9K views</span><button type="button" class="bookmark-button" aria-label="Save featured travel story" aria-pressed="false">&#9825;</button></div>
+        </article>
+
+        <aside class="dashboard-aside">
+          <section class="panel weather-panel" aria-labelledby="weather-title">
+            <div class="section-heading">
+              <div>
+                <span class="eyebrow">LOCAL CONDITIONS</span>
+                <h2 id="weather-title">Weather</h2>
+              </div>
+              <span class="weather-symbol" aria-hidden="true">☁</span>
+            </div>
+            <p class="weather-location">Manila, Philippines</p>
+            <p class="weather-status">Live forecast is not connected.</p>
+            <a href="health.html">Visit the health desk <span aria-hidden="true">&rarr;</span></a>
+          </section>
+
+          <section class="panel newsletter-panel" aria-labelledby="newsletter-title">
+            <div class="section-heading">
+              <div>
+                <span class="eyebrow">THE DAILY NEWSLETTER</span>
+                <h2 id="newsletter-title">Stay Informed</h2>
+              </div>
+            </div>
+            <p>Get the latest headlines delivered to your inbox.</p>
+            <form class="newsletter-form">
+              <label class="visually-hidden" for="newsletter-email">Email address</label>
+              <input id="newsletter-email" type="email" placeholder="Enter your email address" autocomplete="email" required>
+              <button type="submit">Subscribe</button>
+            </form>
+            <p class="newsletter-status" role="status" aria-live="polite"></p>
+          </section>
+        </aside>
       </section>
     </section>
   </main>

@@ -20,7 +20,7 @@
     nav {
       display: grid;
       height: 100%;
-      grid-template-rows: repeat(5, 1fr);
+      grid-template-rows: repeat(4, minmax(0, 1fr)) auto;
       gap: 8px;
     }
 
@@ -44,6 +44,8 @@
     }
 
     nav .activity-home {
+      grid-row: 5;
+      justify-self: start;
       font-size: 15px;
     }
   </style>
@@ -51,9 +53,9 @@
 <body>
 
 <nav>
-  <a class="activity-home" href="../midterm,exam/home.html" target="_top" aria-label="Back to Daily News home">
+  <a class="activity-home" href="../midterm,exam/home.html" target="_top" aria-label="Back">
     <span class="activity-home__arrow" aria-hidden="true">&larr;</span>
-    <span>Back to Home</span>
+    <span>Back</span>
   </a>
   <a href="../resume/index.html" target="mainstage">Resume</a>
   <a href="../bullets/bullets.html" target="mainstage">Bullets</a>

@@ -1,13 +1,13 @@
 .activity-home {
   position: fixed;
-  top: 14px;
+  bottom: 14px;
   left: 14px;
   z-index: 9999;
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  min-height: 42px;
-  padding: 8px 14px 8px 10px;
+  min-height: 38px;
+  padding: 6px 12px 6px 8px;
   border: 1px solid rgba(255, 255, 255, .2);
   border-radius: 999px;
   background: #111827;
@@ -60,7 +60,7 @@ nav .activity-home:focus-visible {
 
 @media(max-width:560px) {
   .activity-home {
-    top: 8px;
+    bottom: 8px;
     left: 8px;
     min-height: 38px;
     padding: 6px 11px 6px 7px;
