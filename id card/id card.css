@@ -157,6 +157,12 @@
     color:var(--green-dark);
     font-size:14px;
   }
+  .card-clock{
+    display:block;
+    margin-top:4px;
+    font-size:.75em;
+    letter-spacing:normal;
+  }
   @media (max-width:480px){
     .body{grid-template-columns:1fr;justify-items:center}
     .info{width:100%}

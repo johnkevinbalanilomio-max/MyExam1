@@ -209,6 +209,17 @@ body {
   overflow-wrap: anywhere;
 }
 
+.resume-copyright {
+  margin-top: 10px;
+  color: rgba(244, 236, 255, .72);
+  font-size: 11px;
+  text-align: center;
+}
+
+.resume-copyright time {
+  display: inline-block;
+  margin-top: 4px;
+}
 
 @media (max-width: 700px) {
   body {

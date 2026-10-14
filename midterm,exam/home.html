@@ -6,8 +6,7 @@
   <title>Daily News | Home</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;
-  700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,7 +18,7 @@
       </a>
 
       <div class="top-tools">
-        <div class="date">SAT, 10 OCT 2026</div>
+        <time class="date" data-live-clock></time>
         <div class="search">
           <input type="text" id="searchBox" placeholder="Search news..." aria-label="Search news" readonly>
         </div>
@@ -217,7 +216,7 @@
           <a href="https://www.youtube.com/" aria-label="YouTube">▶</a>
           <a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a>
         </div>
-        <p>@ 2026 Daily News. All rights reserved.</p>
+        <p>@ <span data-current-year></span> Daily News. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -234,6 +233,7 @@
     </div>
   </dialog>
 
+  <script src="../live-time.js" defer></script>
   <script src="script.js" defer></script>
 </body>
 </html>

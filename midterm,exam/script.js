@@ -3,7 +3,6 @@ const articleCategory = document.querySelector("#article-category");
 const articleTitle = document.querySelector("#article-title");
 const articleImage = document.querySelector(".article-dialog__image");
 const articleText = document.querySelector(".article-dialog__text");
-<<<<<<< HEAD
 const themeStorageKey = "daily-news-theme";
 const themeButton = document.createElement("button");
 const topTools = document.querySelector(".top-tools");
@@ -46,7 +45,7 @@ const activitySearchIndex = [
   {
     title: "Activity 3 — Calendar and Table",
     href: "../table/table.html",
-    content: "Table Calendar August 2026 Sun Mon Tue Wed Thu Fri Sat 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 Rowspan IETI Course Offering TESDA Diploma in Cybersecurity CHED SHS Tech-Pro SHS Academic IT BSIT"
+    content: "Table Calendar current month and year Sun Mon Tue Wed Thu Fri Sat dates today Rowspan IETI Course Offering TESDA Diploma in Cybersecurity CHED SHS Tech-Pro SHS Academic IT BSIT"
   },
   {
     title: "Activity 4 — Frames",
@@ -56,7 +55,7 @@ const activitySearchIndex = [
   {
     title: "Activity 5 — Identification Card",
     href: "../id card/id card.html",
-    content: "Identification Card IETI College and Technology Inc Marikina Campus Your Passport to Work Here and Aboard PHOTO ID 2026-0411 Name John Kevin B Lomio Course and Section Bachelor of Science in Information Technology Date of Birth Dec 22 2004 STUDENT 2025-2026"
+    content: "Identification Card IETI College and Technology Inc Marikina Campus Your Passport to Work Here and Aboard PHOTO ID 2026-0411 Name John Kevin B Lomio Course and Section Bachelor of Science in Information Technology Date of Birth Dec 22 2004 STUDENT current academic year"
   },
   {
     title: "Activity 6 — Movie Zone",
@@ -134,8 +133,6 @@ themeButton.addEventListener("click", () => {
   setTheme(nextTheme);
   localStorage.setItem(themeStorageKey, nextTheme);
 });
-=======
->>>>>>> 8815f75d76f0b6a177680c386ecc93b67b6ab29a
 
 document.querySelectorAll(".feature .btn, .hero .btn").forEach((button) => {
   button.addEventListener("click", () => {
@@ -161,7 +158,6 @@ articleDialog.addEventListener("click", (event) => {
     articleDialog.close();
   }
 });
-<<<<<<< HEAD
 
 const revealTargets = document.querySelectorAll(
   ".header .wrap, .nav .wrap, .breaking, .hero, .trending, .page-head, .feature, .card, .panel, .trending li, .latest li, .back, .footer .wrap"
@@ -189,5 +185,3 @@ if (prefersReducedMotion || !("IntersectionObserver" in window)) {
     revealObserver.observe(element);
   });
 }
-=======
->>>>>>> 8815f75d76f0b6a177680c386ecc93b67b6ab29a

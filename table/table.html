@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Table</title>
   <link rel="stylesheet" href="table.css">
-<<<<<<< HEAD
   <link rel="stylesheet" href="../activity-nav.css">
-=======
->>>>>>> 8815f75d76f0b6a177680c386ecc93b67b6ab29a
   <script type="importmap">
     {
       "imports": {
@@ -29,6 +26,7 @@
 
     <header>
       <h1>Table</h1>
+      <p class="sub"><time data-live-clock></time></p>
     </header>
 
     <section>
@@ -37,7 +35,7 @@
         <table class="cal">
           <thead>
             <tr>
-              <th class="month" colspan="7">August 2026</th>
+              <th class="month" colspan="7" data-live-month></th>
             </tr>
           </thead>
           <tbody>
@@ -143,6 +141,7 @@
 
   </main>
   <div class="mascot-root" id="mascot-root"></div>
+  <script src="../live-time.js" defer></script>
   <script type="module">
     import { createElement } from "react";
     import { createRoot } from "react-dom/client";

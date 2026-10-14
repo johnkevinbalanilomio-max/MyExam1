@@ -883,7 +883,6 @@ html {
   }
 }
 
-<<<<<<< HEAD
 :root[data-theme="dark"] {
   color-scheme: dark;
   --blue: #9ab4ff;
@@ -957,8 +956,6 @@ html {
   box-shadow: 0 10px 28px rgba(0, 0, 0, .2);
 }
 
-=======
->>>>>>> 8815f75d76f0b6a177680c386ecc93b67b6ab29a
 .nav .dropdown a {
   box-shadow: none;
 }
@@ -1055,7 +1052,6 @@ html {
   .article-dialog__content h2 {
     font-size: 20px;
   }
-<<<<<<< HEAD
 }
 
 .reveal {
@@ -1234,6 +1230,4 @@ html {
     opacity: 1;
     transform: none;
   }
-=======
->>>>>>> 8815f75d76f0b6a177680c386ecc93b67b6ab29a
 }
