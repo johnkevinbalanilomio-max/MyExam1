@@ -281,3 +281,91 @@ section h2 {
   text-align: left;
   padding-left: 24px;
 }
+
+@media (max-width: 600px) {
+  body {
+    padding: 24px 12px calc(64px + env(safe-area-inset-bottom));
+    background-attachment: scroll;
+  }
+
+  main {
+    width: 100%;
+    min-width: 0;
+    gap: 20px;
+  }
+
+  section {
+    min-width: 0;
+    padding: 18px 12px;
+    border-radius: 10px;
+  }
+
+  section h2 {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+  }
+
+  .wrap {
+    width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  th,
+  td {
+    padding: 8px 3px;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+
+  .cal td {
+    height: 42px;
+  }
+
+  .cal th.month {
+    padding: 11px 5px;
+    font-size: 1rem;
+  }
+
+  .courses th.title {
+    padding: 12px 6px;
+    font-size: 1rem;
+  }
+
+  .courses td.agency {
+    width: 28%;
+  }
+
+  .courses td.prog {
+    padding-left: 8px;
+    text-align: left;
+  }
+
+  .logo {
+    width: 58px;
+    height: 58px;
+  }
+}
+
+@media (max-width: 360px) {
+  .cal td {
+    height: 36px;
+    font-size: 11px;
+  }
+
+  .courses td.agency {
+    width: 25%;
+  }
+
+  .logo {
+    width: 46px;
+    height: 46px;
+  }
+}

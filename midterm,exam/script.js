@@ -238,3 +238,97 @@ if (prefersReducedMotion || !("IntersectionObserver" in window)) {
     revealObserver.observe(element);
   });
 }
+
+const categoryNav = document.querySelector(".nav");
+const latestStories = document.querySelector(
+  ".home-page .newsroom-main .grid4, .section-page .grid4"
+);
+const activityMenuContainer = document.querySelector(".drop");
+const activityMenu = activityMenuContainer?.querySelector(".dropdown");
+const activityMenuLabel = activityMenuContainer?.querySelector(":scope > span");
+
+if (categoryNav) {
+  categoryNav.id = "category-nav";
+}
+
+if (latestStories) {
+  latestStories.id = "latest-stories";
+}
+
+if (activityMenuContainer && activityMenu && activityMenuLabel) {
+  const activityMenuButton = document.createElement("button");
+  activityMenuButton.type = "button";
+  activityMenuButton.textContent = activityMenuLabel.textContent;
+  activityMenuButton.setAttribute("aria-expanded", "false");
+  activityMenuButton.setAttribute("aria-controls", "activity-menu");
+  activityMenu.id = "activity-menu";
+  activityMenuLabel.replaceWith(activityMenuButton);
+  activityMenuContainer.removeAttribute("tabindex");
+  document.body.append(activityMenu);
+
+  function closeActivityMenu() {
+    activityMenuContainer.classList.remove("is-open");
+    document.body.classList.remove("activity-menu-open");
+    activityMenuButton.setAttribute("aria-expanded", "false");
+  }
+
+  activityMenuButton.addEventListener("click", () => {
+    const isOpen = activityMenuContainer.classList.toggle("is-open");
+    document.body.classList.toggle("activity-menu-open", isOpen);
+    activityMenuButton.setAttribute("aria-expanded", String(isOpen));
+
+    if (isOpen) {
+      const buttonRect = activityMenuButton.getBoundingClientRect();
+      const menuWidth = Math.min(230, window.innerWidth - 24);
+      activityMenu.style.setProperty(
+        "--activity-menu-top",
+        `${Math.max(8, Math.min(buttonRect.bottom + 6, window.innerHeight - 250))}px`
+      );
+      activityMenu.style.setProperty(
+        "--activity-menu-left",
+        `${Math.max(12, Math.min(buttonRect.left, window.innerWidth - menuWidth - 12))}px`
+      );
+    }
+  });
+
+  activityMenu.addEventListener("click", (event) => {
+    if (event.target.closest("a")) {
+      closeActivityMenu();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!activityMenuContainer.contains(event.target) && !activityMenu.contains(event.target)) {
+      closeActivityMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeActivityMenu();
+      activityMenuButton.focus();
+    }
+  });
+}
+
+const mobileNav = document.createElement("nav");
+mobileNav.className = "mobile-nav";
+mobileNav.setAttribute("aria-label", "Mobile navigation");
+mobileNav.innerHTML = `
+  <a class="mobile-nav__item" href="home.html#home" ${document.body.classList.contains("section-page") ? "" : 'aria-current="page"'}>
+    <span class="mobile-nav__icon" aria-hidden="true">⌂</span><span>Home</span>
+  </a>
+  <button class="mobile-nav__item" type="button" aria-label="Search news">
+    <span class="mobile-nav__icon" aria-hidden="true">⌕</span><span>Search</span>
+  </button>
+  <a class="mobile-nav__item" href="#latest-stories" ${document.body.classList.contains("section-page") ? 'aria-current="page"' : ""}>
+    <span class="mobile-nav__icon" aria-hidden="true">▤</span><span>Latest</span>
+  </a>
+  <a class="mobile-nav__item" href="#category-nav">
+    <span class="mobile-nav__icon" aria-hidden="true">☰</span><span>Topics</span>
+  </a>`;
+mobileNav.querySelector("button").addEventListener("click", () => {
+  searchBox.scrollIntoView({ behavior: "smooth", block: "center" });
+  searchBox.focus({ preventScroll: true });
+});
+document.body.append(mobileNav);
